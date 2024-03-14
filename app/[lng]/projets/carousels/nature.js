@@ -1,4 +1,4 @@
-import Elipsed from '../components/Carousels/elipsed'
+import Elipsed from '../../components/Carousels/elipsed'
 
 //Get a nombre of random images from topic
 async function getData(topic, nbr, apiKey) {
@@ -9,7 +9,7 @@ async function getData(topic, nbr, apiKey) {
       },
     });
     const response = await data.json();
-    console.log('Data', response);
+    // console.log('Data', response);
     if (data.ok && response) {
     return response;
     }

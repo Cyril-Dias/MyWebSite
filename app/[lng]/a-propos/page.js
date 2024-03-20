@@ -1,23 +1,21 @@
-import Carousels from './carousels/page'
-
 export async function generateMetadata({ params: { lng } }) {
   // read route params
   const meta = {
     fr: {
-      title: "Mes projets dev",
+      title: "Cyril Dias Dev Full stack| A propos de moi",
       metadescription:
         "Une bibliothèque intégrée de certaines de mes créations",
     },
     en: {
-      title: "My dev projects",
+      title: "Cyril Dias | About me",
       metadescription:
         "Some of my dev projects",
     },
   };
 
   const canonical = {
-    fr: "https://www.localhost:3000/fr/projets/",
-    en: "https://www.localhost:3000/en/projects/"
+    fr: "https://www.localhost:3000/fr/a-propos/",
+    en: "https://www.localhost:3000/en/a-propos/"
   };
 
   return {
@@ -33,6 +31,6 @@ export async function generateMetadata({ params: { lng } }) {
 export default async function Projets({ params: { lng } }) {
 
   return (
-  <Carousels />
+    <div><h1>{lng}</h1></div>
   )
 }

@@ -1,0 +1,20 @@
+{
+    "menu": [
+      {
+        "name": "Home",
+        "href": "home"
+      },
+      {
+        "name": "Projects",
+        "hrefa": "projects"
+      },
+      {
+        "name": "Map",
+        "href": "life-map"
+      },
+      {
+        "name": "Personal information",
+        "href": "charte-responsable"
+      }
+    ]
+  }

@@ -1,3 +1,10 @@
+/* Disable menu on small screen  */
+@media (max-width: 768px) {
+  .disable-menu {
+    display: none;
+  }
+}
+
 .main {
   display: flex;
   flex-direction: column;

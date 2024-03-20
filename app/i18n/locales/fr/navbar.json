@@ -1,0 +1,20 @@
+{
+  "menu": [
+    {
+      "name": "Accueil",
+      "href": "accueil"
+    },
+    {
+      "name": "Projets",
+      "href": "projets"
+    },
+    {
+      "name": "Map",
+      "href": "life-map"
+    },
+    {
+      "name": "Informations personelles",
+      "href": "charte-responsable"
+    }
+  ]
+}

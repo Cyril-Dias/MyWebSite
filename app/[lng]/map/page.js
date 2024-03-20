@@ -1,5 +1,3 @@
-import Carousels from './carousels/page'
-
 export async function generateMetadata({ params: { lng } }) {
   // read route params
   const meta = {
@@ -33,6 +31,6 @@ export async function generateMetadata({ params: { lng } }) {
 export default async function Projets({ params: { lng } }) {
 
   return (
-  <Carousels />
+<div><h1>{lng}</h1></div>
   )
 }

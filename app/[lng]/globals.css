@@ -14,11 +14,6 @@
   transform: translate(0, 5rem);
 }
 
-.swiperslide{
-  display: flex !important;
-  align-items: center !important;
-}
-
 .gradient_glow {
   opacity: 0.5;
   position: absolute;
@@ -30,40 +25,13 @@
     0 0 140px 90px rgba(187, 50, 150, 0.3);
 }
 
-.slide_bottom {
-  top: 100vh;
-  height: 100vh;
-  overflow-y: auto;
-  left: 0;
-  animation: slide 0.5s forwards;
-  position: fixed;
-}
-
-@keyframes slide {
-  100% {
-    top: 0;
-  }
-}
 .gradient_glow_blue {
   opacity: 0.5;
-  position: absolute;
-  top: 45%;
-  left: 30%;
   border-radius: 50%;
   background-color: #fff;
   box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px rgba(50, 150, 187, 0.3),
     0 0 140px 90px rgba(54, 50, 187, 0.3);
 }
-
-.bg_nav {
-  transition: all 0.5s;
-}
-
-.bg_nav.active {
-  background-color: #fff;
-  transition: all 0.5s;
-}
-
 
 /*LOADER*/
 .loading-box {
@@ -84,62 +52,6 @@
   animation: load 3s linear infinite;
 }
 
-@keyframes load {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-
-.objectimg{
-  object-position: 60% 50%;
-}
-
-.transition-right{
-  width: 33vw;
-  transition:all 1s;
-}
-.transition-right.active{
-  width: 30vw;
-  transition: all 1s;
-}
-
-.recap-mobile{
-  bottom:-40vh;
-  transition: all 0.5s;
-}
-.recap-mobile.active{
-  bottom: 0px;
-  transition: all 0.5s;
-}
-
-.recap-mobile_chevron{
-  transform: rotate(0);
-  transition: all 0.5s;
-}
-.recap-mobile_chevron.active{
-  transform: rotate(180deg);
-  transition: all 0.5s;
-}
-
-.iconVan svg{
-  fill: rgb(0, 0, 0);
-  width: 90px;
-  height: 90px;
-}
-
-.iconVanProduit svg{
-  fill: rgb(0, 0, 0);
-  width: 90px;
-  height: 90px;
-}
-
-
-
-
 /*ANIMATION*/
 .anim-fade{
   opacity: 0;
@@ -153,47 +65,5 @@
 	to {
 		opacity: 1;
 		transform: translate3d(0, 0, 0);
-	}
-}
-
-
-.anim-cookie{
-  transform-origin: bottom right 60px;
-  animation: cookie 0.8s ease-in-out;
-}
-
-.anim-cookie div {
-  animation: opacity 0.4s ease-in both;
-  animation-delay: 0.8s;
-}
-
-.cookie-opacity{
-  animation: cookie-black 0.2s ease-in both;
-}
-
-@keyframes cookie-black {
-	from {
-    background-color: rgba(0, 0, 0, 0);
-	}
-	to {
-		background-color: rgba(0, 0, 0, 0.30);
-	}
-}
-
-@keyframes opacity {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes cookie {
-	from {
-		transform: scale(-100%);
-	}
-	to {
-		transform: scale(100%);
 	}
 }

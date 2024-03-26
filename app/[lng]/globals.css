@@ -4,66 +4,42 @@
 
 @layer base {
   .screen {
-    @apply 2xl:px-[18vw] xl:px-[10rem] lg:px-8 md:px-4 px-4 
+    @apply 2xl:px-[18vw] xl:px-[10rem] lg:px-8 md:px-4 px-4
   }
 }
 
-.error {
-  left: 0px;
-  transition: all 1s;
-  transform: translate(0, 5rem);
+body {
+  background: rgba(0, 3, 87, 1);
+  background: radial-gradient(farthest-corner at 50% -50%, #30bbbe, #000357),
+    radial-gradient(ellipse at center, #000357, transparent),
+    radial-gradient(ellipse at bottom, #000357, #00023b);
+  color: rgb(241 245 249);
 }
 
-.gradient_glow {
-  opacity: 0.5;
-  position: absolute;
-  top: 45%;
-  left: 20%;
-  border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px rgba(187, 50, 150, 0.3),
-    0 0 140px 90px rgba(187, 50, 150, 0.3);
+/* Overlapped Titles component */
+.overlap {
+  --overlap: .15ch;
+  --shadow-offset: .1ch;
+  --shadow-blur: .2ch;
+  --shadow-color: black;
+  letter-spacing: calc(var(--overlap) * -1.5);
+  isolation: isolate;
 }
 
-.gradient_glow_blue {
-  opacity: 0.5;
-  border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px rgba(50, 150, 187, 0.3),
-    0 0 140px 90px rgba(54, 50, 187, 0.3);
+.overlap-front {
+  --mult: 1;
 }
 
-/*LOADER*/
-.loading-box {
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  width: 100vw;
-  height: 10px;
-  overflow: hidden;
-}
-.loader {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius:2rem;
-  background: linear-gradient(45deg, rgba(50, 150, 187, 0.3), rgba(187, 50, 150, 0.3));
-  left: -100%;
-  animation: load 3s linear infinite;
+.overlap:hover {
+  --mult: -1;
 }
 
-/*ANIMATION*/
-.anim-fade{
-  opacity: 0;
-	animation: fadeIn 0.4s ease-in both;
+.overlap>span {
+  position: relative;
+  z-index: calc(var(--index, 1) * var(--mult, 1));
 }
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translate3d(0, -50%, 0);
-	}
-	to {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
+
+.overlap-front>span:not(:first-of-type) {
+  text-shadow:
+    calc(var(--mult, 1) * var(--shadow-offset, 0) * -1) 0 var(--shadow-blur, 0) var(--shadow-color, black);
 }

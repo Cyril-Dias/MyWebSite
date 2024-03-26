@@ -96,12 +96,15 @@ export default function Navbar({ lng }) {
 
       {/* Larger screen Component */}
       <div
-        className="hidden md:flex w-screen h-max fixed top-0 p-10 backdrop-blur bg-slate-900/75"
+        className="hidden md:flex w-screen h-max fixed top-0 p-10 backdrop-blur bg-slate-900/75 z-30"
         onPointerMove={(e) => {
           setPosition({
             x: e.clientX,
             y: e.clientY,
           });
+        }}
+        onMouseLeave={() => {
+          setPosition({ x: -20, y: -20 });
         }}
       >
         {menuActive ? (

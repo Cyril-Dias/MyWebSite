@@ -1,4 +1,5 @@
-"use client";
+'use client'
+
 import { useEffect } from 'react';
 import { inter } from '../../fonts'
 export default function OverLappedTitle({ title }) {
@@ -21,7 +22,7 @@ export default function OverLappedTitle({ title }) {
 
   return (
     <>
-      <h1 className={`${inter.className} mt-20 uppercase text-center font-bold text-xl overlap overlap-front z-10`}>
+      <h1 className={`${inter.className} lg:mt-20 uppercase text-center text-2xl font-bold overlap overlap-front z-10`}>
         {title}
       </h1>
     </>

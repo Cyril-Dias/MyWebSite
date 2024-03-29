@@ -1,4 +1,7 @@
 {
-    "title": "Hi there!",
-    "desc": "To second page"
-  }
+  "title": "Hello World !",
+  "main": "Hello",
+  "first": "World !",
+  "second": "Test",
+  "desc": "Aller à la second page"
+}

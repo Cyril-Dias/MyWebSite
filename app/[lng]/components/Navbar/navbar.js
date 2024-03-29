@@ -32,14 +32,13 @@ export default function Navbar({ lng }) {
     x: -20,
     y: -20,
   });
-  const backPosition = { x: -20, y: -20 };
 
   return (
     <>
-      {/* Small screen Component */}
-      <div className="fixed bottom-0 flex md:hidden w-screen backdrop-blur bg-slate-900/75">
-        <ul className="grid grid-cols-5 w-full justify-items-center border-t border-slate-50/[0.06] p-6">
-          <li className="flex h-full">
+      {/* Sm and Md screen Component */}
+      <div className="fixed bottom-0 flex lg:hidden w-screen md:min-h-28 backdrop-blur bg-slate-900/75">
+        <ul className="grid grid-cols-5 w-full justify-items-center items-center border-t border-slate-50/[0.06] p-6">
+          <li>
             <Link href={`/${lng}/`}>
               {/* Conditional rendering Icons depending on the pathname  */}
               {pathname === `/${lng}` && !lngActive ? (
@@ -49,7 +48,7 @@ export default function Navbar({ lng }) {
               )}
             </Link>
           </li>
-          <li className="cursor-pointer hover:scale-110 transition-all duration-75">
+          <li>
             <Link href={`/${lng}/projets`}>
               {pathname === `/${lng}/projets` ? (
                 <FaFileCode color={"#fff"} style={{ fontSize: 24 }} />
@@ -58,7 +57,7 @@ export default function Navbar({ lng }) {
               )}
             </Link>
           </li>
-          <li className="cursor-pointer hover:scale-110 transition-all duration-75">
+          <li>
             <Link href={`/${lng}/a-propos`}>
               {pathname === `/${lng}/a-propos` ? (
                 <IoPerson color={"#fff"} style={{ fontSize: 25 }} />
@@ -67,7 +66,7 @@ export default function Navbar({ lng }) {
               )}
             </Link>
           </li>
-          <li className="cursor-pointer hover:scale-110 transition-all duration-75">
+          <li>
             <Link href={`/${lng}/map`}>
               {pathname === `/${lng}/map` ? (
                 <IoLocation color={"#fff"} style={{ fontSize: 25 }} />
@@ -76,7 +75,7 @@ export default function Navbar({ lng }) {
               )}
             </Link>
           </li>
-          <li className="cursor-pointer">
+          <li>
             {lngActive ? (
               <IoGlobe
                 color={"#fff"}
@@ -96,7 +95,7 @@ export default function Navbar({ lng }) {
 
       {/* Larger screen Component */}
       <div
-        className="hidden md:flex w-screen h-max fixed top-0 p-10 backdrop-blur bg-slate-900/75 z-30"
+        className="hidden lg:flex w-screen h-max fixed top-0 p-10 backdrop-blur bg-slate-900/75 z-30"
         onPointerMove={(e) => {
           setPosition({
             x: e.clientX,

@@ -4,7 +4,7 @@
 
 @layer base {
   .screen {
-    @apply 2xl:px-[18vw] xl:px-[10rem] lg:px-8 md:px-4 px-4
+    @apply xl:px-[10rem] lg:px-8 px-4
   }
 }
 
@@ -39,7 +39,7 @@ body {
   z-index: calc(var(--index, 1) * var(--mult, 1));
 }
 
-.overlap-front>span:not(:first-of-type) {
+.overlap-front {
   text-shadow:
     calc(var(--mult, 1) * var(--shadow-offset, 0) * -1) 0 var(--shadow-blur, 0) var(--shadow-color, black);
 }

@@ -22,7 +22,7 @@ export default function OverLappedTitle({ title }) {
 
   return (
     <>
-      <h1 className={`${inter.className} lg:mt-20 uppercase text-center text-2xl font-bold overlap overlap-front z-10`}>
+      <h1 className={`${inter.className} lg:mt-20 uppercase text-center text-[3rem] md:text-[4rem] font-bold overlap overlap-front z-10 ease-in-out duration-300`}>
         {title}
       </h1>
     </>

@@ -22,7 +22,7 @@ body {
   --shadow-offset: .1ch;
   --shadow-blur: .2ch;
   --shadow-color: black;
-  letter-spacing: calc(var(--overlap) * -1.5);
+  letter-spacing: calc(var(--overlap) * -0.8);
   isolation: isolate;
 }
 

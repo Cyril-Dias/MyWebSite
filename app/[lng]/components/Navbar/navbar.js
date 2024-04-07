@@ -153,7 +153,7 @@ export default function Navbar({ lng }) {
       >
         {menuActive ? (
           <>
-            <div className="w-full h-full">
+            <div className="relative w-full h-full">
               <div
                 className="hidden lg:flex bg-teal-500 blur-lg -z-10"
                 style={{
@@ -175,17 +175,17 @@ export default function Navbar({ lng }) {
                   </li>
                 ))}
 
-                <li>
+                <li className="flex justify-center h-full w-full">
                   <div className="flex justify-items-center space-x-2">
                     <IoGlobeOutline color={"#fff"} style={{ fontSize: 25 }} />
-                    <span className="font-bold">{t(lng)}</span>
+                    <span className="font-bold hover:cursor-pointer hover:text-slate-400">{t(lng)}</span>
                     {languages
                       .filter((l) => lng !== l)
                       .map((l, index) => {
                         return (
                           <div key={l} className="space-x-2 items-center">
                             <span className="">/</span>
-                            <span className="text-slate-400 hover:text-white">
+                            <span className="text-xs hover:text-slate-400">
                               {index > 0 && " or "}
                               <Link href={`/${l}`}>{t(l)}</Link>
                             </span>

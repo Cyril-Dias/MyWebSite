@@ -43,3 +43,19 @@ body {
   text-shadow:
     calc(var(--mult, 1) * var(--shadow-offset, 0) * -1) 0 var(--shadow-blur, 0) var(--shadow-color, black);
 }
+
+/* Slide in from right animation */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.slideFromRight {
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-name: slideInLeft;
+}

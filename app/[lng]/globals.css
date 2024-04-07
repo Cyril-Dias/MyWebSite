@@ -13,7 +13,7 @@ body {
   background: radial-gradient(farthest-corner at 50% -50%, #30bbbe, #000357),
     radial-gradient(ellipse at center, #000357, transparent),
     radial-gradient(ellipse at bottom, #000357, #00023b);
-  color: rgb(241 245 249);
+  color: rgb(241, 245, 249);
 }
 
 /* Overlapped Titles component */

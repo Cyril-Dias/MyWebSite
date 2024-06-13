@@ -1,5 +1,7 @@
 {
     "title": "Hello World !",
-    "titleFirst": "Développeur Web Mobile",
-    "titleSecond": "Spécialisation Frontend"
+    "contact": "Me contacter",
+    "job": "Je suis à la recherche d'une alternance comme développeur Full-stack",
+    "text": " Développeur Web spécialisé en Frontend",
+    "name": "Je suis Cyril Dias,"
   }

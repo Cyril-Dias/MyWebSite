@@ -1,7 +1,7 @@
 {
   "title": "Hello World !",
-  "main": "Hello",
-  "first": "World !",
-  "second": "Test",
-  "desc": "Aller à la second page"
+  "contact": "Contact me",
+  "job": "I'm looking for an apprenticeship as a Full-stack developer",
+  "text": " A Web Developer specialized in Frontend",
+  "name": "I'm Cyril Dias," 
 }

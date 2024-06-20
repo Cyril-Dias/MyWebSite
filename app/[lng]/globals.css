@@ -48,15 +48,63 @@ body {
 @keyframes slideInRight {
   0% {
     transform: translateX(200%);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(100);
+    opacity: 1;
   }
-}
+  }
+  @-moz-keyframes slideInRight {
+    0% {
+      transform: translateX(200%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(100);
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes slideInRight {
+    0% {
+      transform: translateX(200%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(100);
+      opacity: 1;
+    }
+  }
+  
+  @-o-keyframes slideInRight {
+    0% {
+      transform: translateX(200%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(100);
+      opacity: 1;
+    }
+  }
+  
+  @-ms-keyframes slideInRight {
+    0% {
+      transform: translateX(200%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(100);
+      opacity: 1;
+    }
+  }
+
 .slideFromRight {
   overflow: hidden;
-  animation-duration: 2.5s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in;
   animation-delay: 1s;
-  animation-name: slideInRight;
+  animation: slideInRight 5s;
+  -webkit-animation: slideInRight 5s;
+  -moz-animation: slideInRight 5s;
+  -o-animation: slideInRight 5s;
+  -ms-animation: slideInRight 5s;
 }

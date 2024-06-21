@@ -1,8 +1,9 @@
 {
     "title": "Hello World !",
     "contact": "Me contacter",
-    "job": "Je suis à la recherche d'une alternance comme développeur Full-stack",
+    "job": "Je suis à la recherche d'une alternance comme développeur Full-stack, n'hésitez pas à me contacter !",
     "text": "Développeur Web </br> Spécialisation Frontend",
     "textLg": "Développeur Web / Spécialisation Frontend",
-    "name": "Cyril Dias"
-  }
+    "name": "Cyril Dias",
+    "cv": "Mon CV"
+    }

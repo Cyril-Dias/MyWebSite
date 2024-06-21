@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { useEffect } from 'react';
-import { inter } from '../../fonts'
+import { useEffect } from "react";
+import { inter } from "../../fonts";
 export default function OverLappedTitle({ title }) {
   // UseEffect to select the overlap Css class
   useEffect(() => {
@@ -22,9 +22,17 @@ export default function OverLappedTitle({ title }) {
 
   return (
     <>
-      <h1 className={`${inter.className} lg:mt-20 uppercase text-center text-[3rem] md:text-[4rem] font-bold overlap overlap-front z-10 ease-in-out duration-300`}>
-        {title}
-      </h1>
+      {/* Component container to animate on first load */}
+      <div className="">
+        {/* Interactive title only for md and larger screens */}
+        <h1
+          className={`${inter.className} hidden md:flex lg:mt-20 uppercase text-center text-[3rem] md:text-[4rem] font-bold overlap overlap-front z-10 ease-in-out duration-300`}
+        >
+          {title}
+        </h1>
+        {/* small screen display */}
+        <p className="flex md:hidden text-3xl"> {title}</p>
+      </div>
     </>
   );
 }

@@ -1,8 +1,9 @@
 {
   "title": "Hello World !",
   "contact": "Contact me",
-  "job": "I'm looking for an apprenticeship as a Full-stack developer",
+  "job": "I'm looking for an apprenticeship as a Full-stack developer, please do not hesitate to contact me !",
   "text": "Web Developer </br> Specialized in Frontend",
   "textLg": "Web Developer / Specialized in Frontend",
-  "name": "Cyril Dias" 
+  "name": "Cyril Dias",
+  "cv": "My Curriculum Vitae" 
 }

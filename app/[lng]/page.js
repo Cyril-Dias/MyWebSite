@@ -30,10 +30,9 @@ export async function generateMetadata({ params: { lng } }) {
 export default async function Home({ params: { lng } }) {
   const { t } = await useTranslation(lng, "homepage");
   return (
-    <main className="flex min-h-screen flex-col items-center justify-around p-24">
-      <div className="hidden md:flex">
-        <OverLappedTitle lng={lng} title={t("title")} />
-      </div>
+    <main className="flex min-h-screen flex-col items-center justify-start md:justify-around pt-8 p-24 gap-y-12">
+      <div className="slideFromTop">
+      <OverLappedTitle lng={lng} title={t("title")} /></div>
       <FirstLine
         lng={lng}
         title={t("title")}
@@ -41,6 +40,8 @@ export default async function Home({ params: { lng } }) {
         job={t("job")}
         text={t("text")}
         textLg={t("textLg")}
+        cv={t("cv")}
+        contact={t("contact")}
       />
       {/*  <Nature />*/}
     </main>

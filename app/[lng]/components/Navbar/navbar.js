@@ -37,7 +37,7 @@ export default function Navbar({ lng }) {
   return (
     <>
       {/* Sm and Md screen Component */}
-      <div className="fixed bottom-0 flex lg:hidden w-screen md:min-h-28 backdrop-blur bg-slate-900/75">
+      <div className="fixed bottom-0 flex lg:hidden w-screen min-h-28 backdrop-blur bg-slate-900/75">
         <ul className="grid grid-cols-5 w-full justify-items-center items-center border-t border-slate-50/[0.06] p-6">
           <li>
             <Link href={`/${lng}/`}>
@@ -77,11 +77,11 @@ export default function Navbar({ lng }) {
             </Link>
           </li>
           {/* LANGUAGE */}
-          <li className="flex justify-center w-full h-full">
+          <li className="flex justify-center items-center w-full h-full">
             {lngActive ? (
               <>
-                <div className="relative flex justify-center w-full h-full bg-white/30 rounded-lg">
-                  <div className="absolute flex flex-col h-[5rem]">
+                {/* <div className="relative flex justify-center w-full h-full bg-white/30 rounded-lg">
+                  <div className="absolute inset-0 flex flex-col-reverse h-[5rem]">
                     <IoGlobe
                       color={"#fff"}
                       style={{ fontSize: 25 }}
@@ -104,6 +104,33 @@ export default function Navbar({ lng }) {
                         );
                       })}
                   </div>
+                </div> */}
+                <div className="relative flex justify-center items-center h-full w-full">
+                  <IoGlobe
+                    color={"#fff"}
+                    style={{ fontSize: 25 }}
+                    onClick={(e) => handleLngActive(e)}
+                  />
+                  <div className="absolute -top-10 w-[30px] h-[90px] bg-white/30 rounded-lg">
+                    <div className="flex flex-col h-full text-center mt-2">
+                      {languages
+                        .filter((l) => lng !== l)
+                        .map((l, index) => {
+                          return (
+                            <div
+                              key={l}
+                              className="space-y-2 justify-items-center"
+                            >
+                              <span className="text-sm">
+                                {index > 0 && " or "}
+                                <Link href={`/${l}`}>{t(l)}</Link>
+                              </span>
+                            </div>
+                          );
+                        })}
+                      <span className="font-bold text-sm">{t(lng)}</span>
+                    </div>
+                  </div>
                 </div>
               </>
             ) : (
@@ -116,28 +143,6 @@ export default function Navbar({ lng }) {
           </li>
         </ul>
       </div>
-      {/* LANGUAGE */}
-      {/* <div className="flex items-center hover:cursor-pointer w-full justify-end mb-4 space-x-2">
-        <IoGlobe
-         color={"#fff"}
-         style={{ fontSize: 25 }}
-         onClick={(e) => handleLngActive(e)}
-        />
-        <span className="font-bold text-xs">{t(lng)}</span>
-        {languages
-          .filter((l) => lng !== l)
-          .map((l, index) => {
-            return (
-              <div key={l} className="space-x-2 items-center">
-                <span className="">/</span>
-                <span className="text-xs">
-                  {index > 0 && " or "}
-                  <Link href={`/${l}`}>{t(l)}</Link>
-                </span>
-              </div>
-            );
-          })}
-      </div> */}
       {/* Larger screen Component */}
       <div
         className="hidden lg:flex w-screen h-max fixed top-0 p-10 backdrop-blur bg-slate-900/75 z-30"
@@ -178,7 +183,9 @@ export default function Navbar({ lng }) {
                 <li className="flex justify-center h-full w-full">
                   <div className="flex justify-items-center space-x-2">
                     <IoGlobeOutline color={"#fff"} style={{ fontSize: 25 }} />
-                    <span className="font-bold hover:cursor-pointer hover:text-slate-400">{t(lng)}</span>
+                    <span className="font-bold hover:cursor-pointer hover:text-slate-400">
+                      {t(lng)}
+                    </span>
                     {languages
                       .filter((l) => lng !== l)
                       .map((l, index) => {

@@ -58,7 +58,7 @@ export default function Navbar({ lng }) {
               )}
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href={`/${lng}/a-propos`}>
               {pathname === `/${lng}/a-propos` ? (
                 <IoPerson color={"#fff"} style={{ fontSize: 25 }} />
@@ -66,7 +66,7 @@ export default function Navbar({ lng }) {
                 <IoPersonOutline color={"#fff"} style={{ fontSize: 25 }} />
               )}
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href={`/${lng}/map`}>
               {pathname === `/${lng}/map` ? (
@@ -80,31 +80,6 @@ export default function Navbar({ lng }) {
           <li className="flex justify-center items-center w-full h-full">
             {lngActive ? (
               <>
-                {/* <div className="relative flex justify-center w-full h-full bg-white/30 rounded-lg">
-                  <div className="absolute inset-0 flex flex-col-reverse h-[5rem]">
-                    <IoGlobe
-                      color={"#fff"}
-                      style={{ fontSize: 25 }}
-                      onClick={(e) => handleLngActive(e)}
-                    />
-                    <span className="font-bold text-sm">{t(lng)}</span>
-                    {languages
-                      .filter((l) => lng !== l)
-                      .map((l, index) => {
-                        return (
-                          <div
-                            key={l}
-                            className="space-y-2 justify-items-center"
-                          >
-                            <span className="text-sm">
-                              {index > 0 && " or "}
-                              <Link href={`/${l}`}>{t(l)}</Link>
-                            </span>
-                          </div>
-                        );
-                      })}
-                  </div>
-                </div> */}
                 <div className="relative flex justify-center items-center h-full w-full">
                   <IoGlobe
                     color={"#fff"}
@@ -153,7 +128,7 @@ export default function Navbar({ lng }) {
           });
         }}
         onMouseLeave={() => {
-          setPosition({ x: -20, y: -20 });
+          setPosition({ x: -0, y: -0 });
         }}
       >
         {menuActive ? (
@@ -165,18 +140,18 @@ export default function Navbar({ lng }) {
                   position: "absolute",
                   borderRadius: "50%",
                   transform: `translate(${position.x}px, ${position.y}px)`,
-                  left: -10,
-                  top: -10,
+                  left: -50,
+                  top: -50,
                   width: 20,
                   height: 20,
                 }}
               />
-              <ol className="grid grid-cols-5 justify-items-center">
+              <ol className="grid grid-cols-4 justify-items-center">
                 {t("menu", { returnObjects: true }).map((item, index) => (
                   <li className="flex justify-center h-full w-full" key={index}>
-                    <p className="text-center text-lg cursor-pointer hover:text-slate-400">
+                    <Link href={`/${lng}/${item.href}`} className="text-center text-lg cursor-pointer hover:text-slate-400">
                       {item.name}
-                    </p>
+                    </Link>
                   </li>
                 ))}
 
@@ -203,23 +178,6 @@ export default function Navbar({ lng }) {
                 </li>
               </ol>
             </div>
-            {/* <div className="flex items-center hover:cursor-pointer w-full justify-end mb-4 space-x-2">
-              <IoGlobe style={{ fontSize: 15 }} className="text-black" />
-              <span className="font-bold text-xs">{t(lng)}</span>
-              {languages
-                .filter((l) => lng !== l)
-                .map((l, index) => {
-                  return (
-                    <div key={l} className="space-x-2 items-center">
-                      <span className="">/</span>
-                      <span className="text-xs">
-                        {index > 0 && " or "}
-                        <Link href={`/${l}`}>{t(l)}</Link>
-                      </span>
-                    </div>
-                  );
-                })}
-            </div>{" "} */}
           </>
         ) : (
           <div>

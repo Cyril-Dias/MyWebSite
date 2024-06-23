@@ -4,7 +4,7 @@
 
 @layer base {
   .screen {
-    @apply xl:px-[10rem] lg:px-8 px-4
+    @apply xl:pt-28 lg:pt-28 md:pt-28 px-28 pb-28 pt-8
   }
 }
 
@@ -295,11 +295,11 @@ body {
 .slideFromBottom {
   overflow: hidden;
   animation-timing-function: ease-in;
-  animation: slideInBottom 5s;
-  -webkit-animation: slideInBottom 5s;
-  -moz-animation: slideInBottom 5s;
-  -o-animation: slideInBottom 5s;
-  -ms-animation: slideInBottom 5s;
+  animation: slideInBottom 4s;
+  -webkit-animation: slideInBottom 4s;
+  -moz-animation: slideInBottom 4s;
+  -o-animation: slideInBottom 4s;
+  -ms-animation: slideInBottom 4s;
 }
 
 /* Fade in animation for header text components/Home/header */
@@ -355,4 +355,133 @@ body {
   -moz-animation: FadeInAnimation 3.5s;
   -o-animation: FadeInAnimation 3.5s;
   -ms-animation: FadeInAnimation 3.5s;
+}
+
+@keyframes BorderScale {
+  0% {
+    transform: translate(-200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(100);
+    opacity: 1;
+  }
+  }
+  @-moz-keyframes BorderScale {
+      0% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(100);
+    opacity: 1;
+  }
+  }
+  @-webkit-keyframes BorderScale {
+      0% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(100);
+    opacity: 1;
+  }
+  }
+  
+  @-o-keyframes BorderScale {
+      0% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(100);
+    opacity: 1;
+  }
+  }
+  
+  @-ms-keyframes BorderScale {
+      0% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(100);
+    opacity: 1;
+  }
+  }
+
+.borderScale {
+  overflow: hidden;
+  animation-timing-function: ease-in;
+  animation-delay: 4.5s;
+  animation: BorderScale 4.5s;
+  -webkit-animation: BorderScale 4.5s;
+  -moz-animation: BorderScale 4.5s;
+  -o-animation: BorderScale 4.5s;
+  -ms-animation: BorderScale 4.5s;
+}
+
+/* Animation for the maintenance page  */
+@keyframes StarTranslate {
+  0% {
+    opacity: 0.8;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(100%, 100%);
+  }
+  }
+  @-moz-keyframes StarTranslate {
+    0% {
+      opacity: 0.8;
+      transform: translate(0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(100%, 100%);
+    }
+  }
+  @-webkit-keyframes StarTranslate {
+    0% {
+      opacity: 0.8;
+      transform: translate(0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(100%, 100%);
+    }
+  }
+  
+  @-o-keyframes StarTranslate {
+    0% {
+      opacity: 0.8;
+      transform: translate(0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(100%, 100%);
+    }
+  }
+  
+  @-ms-keyframes StarTranslate {
+    0% {
+      opacity: 0.8;
+      transform: translate(0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(100%, 100%);
+    }
+  }
+
+.starTranslate {
+  overflow: hidden;
+  animation-timing-function: ease-in;
+  animation-delay: 4.5s;
+  animation: StarTranslate 4.5s;
+  -webkit-animation: StarTranslate 4.5s;
+  -moz-animation: StarTranslate 4.5s;
+  -o-animation: StarTranslate 4.5s;
+  -ms-animation: StarTranslate 4.5s;
 }

@@ -16,8 +16,8 @@ export async function generateMetadata({ params: { lng } }) {
   };
 
   const canonical = {
-    fr: "https://www.localhost:3000/fr/projets/",
-    en: "https://www.localhost:3000/en/projects/"
+    fr: "https://www.localhost:3000/fr/projets",
+    en: "https://www.localhost:3000/en/projects"
   };
 
   return {
@@ -33,6 +33,8 @@ export async function generateMetadata({ params: { lng } }) {
 export default async function Projets({ params: { lng } }) {
 
   return (
-  <Carousels />
+  <div className='screen'>
+    <Carousels lng={lng} />
+  </div>
   )
 }

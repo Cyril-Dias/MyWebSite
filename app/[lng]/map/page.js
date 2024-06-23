@@ -1,3 +1,5 @@
+import Maintenance from '../components/Maintenance/maintenance'
+
 export async function generateMetadata({ params: { lng } }) {
   // read route params
   const meta = {
@@ -14,8 +16,8 @@ export async function generateMetadata({ params: { lng } }) {
   };
 
   const canonical = {
-    fr: "https://www.localhost:3000/fr/projets/",
-    en: "https://www.localhost:3000/en/projects/"
+    fr: "https://www.localhost:3000/fr/life-map/",
+    en: "https://www.localhost:3000/en/life-map/"
   };
 
   return {
@@ -31,6 +33,6 @@ export async function generateMetadata({ params: { lng } }) {
 export default async function Projets({ params: { lng } }) {
 
   return (
-<div><h1>{lng}</h1></div>
+    <Maintenance status={'Maintenance'}/>
   )
 }

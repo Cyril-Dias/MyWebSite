@@ -2,19 +2,15 @@
   "menu": [
     {
       "name": "Accueil",
-      "href": "accueil"
+      "href": ""
     },
     {
       "name": "Projets",
       "href": "projets"
     },
     {
-      "name": "Map",
-      "href": "life-map"
-    },
-    {
-      "name": "Informations personelles",
-      "href": "charte-responsable"
+      "name": "Life-Map",
+      "href": "map"
     }
   ],
     "fr": "FR",

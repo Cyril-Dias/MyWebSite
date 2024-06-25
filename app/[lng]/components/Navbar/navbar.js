@@ -38,7 +38,7 @@ export default function Navbar({ lng }) {
     <>
       {/* Sm and Md screen Component */}
       <div className="fixed bottom-0 flex lg:hidden w-screen min-h-28 backdrop-blur bg-slate-900/75">
-        <ul className="grid grid-cols-5 w-full justify-items-center items-center border-t border-slate-50/[0.06] p-6">
+        <ul className="grid grid-cols-4 w-full justify-items-center items-center border-t border-slate-50/[0.06] p-6">
           <li>
             <Link href={`/${lng}/`}>
               {/* Conditional rendering Icons depending on the pathname  */}

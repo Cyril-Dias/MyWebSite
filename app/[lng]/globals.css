@@ -4,7 +4,7 @@
 
 @layer base {
   .screen {
-    @apply xl:pt-28 lg:pt-28 md:pt-28 px-28 pb-28 pt-8
+    @apply xl:pt-28 xl:px-28 lg:pt-28 lg:px-28 md:pt-28 md:px-20 px-8 pb-28 pt-8
   }
 }
 
@@ -45,6 +45,7 @@ body {
   text-shadow:
     calc(var(--mult, 1) * var(--shadow-offset, 0) * -1) 0 var(--shadow-blur, 0) var(--shadow-color, black);
 }
+
 /* Following animations are only used for the homepage  */
 /* Slide in from right animation for header image components/Home/header */
 @keyframes slideInRight {
@@ -52,53 +53,60 @@ body {
     transform: translateX(200%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(100);
     opacity: 1;
   }
+}
+
+@-moz-keyframes slideInRight {
+  0% {
+    transform: translateX(200%);
+    opacity: 0;
   }
-  @-moz-keyframes slideInRight {
-    0% {
-      transform: translateX(200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(100);
-      opacity: 1;
-    }
+
+  100% {
+    transform: translateX(100);
+    opacity: 1;
   }
-  @-webkit-keyframes slideInRight {
-    0% {
-      transform: translateX(200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(100);
-      opacity: 1;
-    }
+}
+
+@-webkit-keyframes slideInRight {
+  0% {
+    transform: translateX(200%);
+    opacity: 0;
   }
-  
-  @-o-keyframes slideInRight {
-    0% {
-      transform: translateX(200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(100);
-      opacity: 1;
-    }
+
+  100% {
+    transform: translateX(100);
+    opacity: 1;
   }
-  
-  @-ms-keyframes slideInRight {
-    0% {
-      transform: translateX(200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(100);
-      opacity: 1;
-    }
+}
+
+@-o-keyframes slideInRight {
+  0% {
+    transform: translateX(200%);
+    opacity: 0;
   }
+
+  100% {
+    transform: translateX(100);
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes slideInRight {
+  0% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(100);
+    opacity: 1;
+  }
+}
 
 .slideFromRight {
   overflow: hidden;
@@ -116,53 +124,60 @@ body {
     transform: translateX(-200%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(100);
     opacity: 1;
   }
+}
+
+@-moz-keyframes slideInLeft {
+  0% {
+    transform: translateX(-200%);
+    opacity: 0;
   }
-  @-moz-keyframes slideInLeft {
-    0% {
-      transform: translateX(-200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(100);
-      opacity: 1;
-    }
+
+  100% {
+    transform: translateX(100);
+    opacity: 1;
   }
-  @-webkit-keyframes slideInLeft {
-    0% {
-      transform: translateX(-200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(100);
-      opacity: 1;
-    }
+}
+
+@-webkit-keyframes slideInLeft {
+  0% {
+    transform: translateX(-200%);
+    opacity: 0;
   }
-  
-  @-o-keyframes slideInLeft {
-    0% {
-      transform: translateX(-200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(100);
-      opacity: 1;
-    }
+
+  100% {
+    transform: translateX(100);
+    opacity: 1;
   }
-  
-  @-ms-keyframes slideInLeft {
-    0% {
-      transform: translateX(-200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(100);
-      opacity: 1;
-    }
+}
+
+@-o-keyframes slideInLeft {
+  0% {
+    transform: translateX(-200%);
+    opacity: 0;
   }
+
+  100% {
+    transform: translateX(100);
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes slideInLeft {
+  0% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(100);
+    opacity: 1;
+  }
+}
 
 .slideFromLeft {
   overflow: hidden;
@@ -180,53 +195,60 @@ body {
     transform: translateY(-200%);
     opacity: 0;
   }
+
   100% {
     transform: translateY(100);
     opacity: 1;
   }
+}
+
+@-moz-keyframes slideInTop {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0;
   }
-  @-moz-keyframes slideInTop {
-    0% {
-      transform: translateY(-200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(100);
-      opacity: 1;
-    }
+
+  100% {
+    transform: translateY(100);
+    opacity: 1;
   }
-  @-webkit-keyframes slideInTop {
-    0% {
-      transform: translateY(-200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(100);
-      opacity: 1;
-    }
+}
+
+@-webkit-keyframes slideInTop {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0;
   }
-  
-  @-o-keyframes slideInTop {
-    0% {
-      transform: translateY(-200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(100);
-      opacity: 1;
-    }
+
+  100% {
+    transform: translateY(100);
+    opacity: 1;
   }
-  
-  @-ms-keyframes slideInTop {
-    0% {
-      transform: translateY(-200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(100);
-      opacity: 1;
-    }
+}
+
+@-o-keyframes slideInTop {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0;
   }
+
+  100% {
+    transform: translateY(100);
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes slideInTop {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(100);
+    opacity: 1;
+  }
+}
 
 .slideFromTop {
   overflow: hidden;
@@ -244,53 +266,60 @@ body {
     transform: translateY(200%);
     opacity: 0;
   }
+
   100% {
     transform: translateY(100);
     opacity: 1;
   }
+}
+
+@-moz-keyframes slideInBottom {
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
   }
-  @-moz-keyframes slideInBottom {
-    0% {
-      transform: translateY(200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(100);
-      opacity: 1;
-    }
+
+  100% {
+    transform: translateY(100);
+    opacity: 1;
   }
-  @-webkit-keyframes slideInBottom {
-    0% {
-      transform: translateY(200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(100);
-      opacity: 1;
-    }
+}
+
+@-webkit-keyframes slideInBottom {
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
   }
-  
-  @-o-keyframes slideInBottom {
-    0% {
-      transform: translateY(200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(100);
-      opacity: 1;
-    }
+
+  100% {
+    transform: translateY(100);
+    opacity: 1;
   }
-  
-  @-ms-keyframes slideInBottom {
-    0% {
-      transform: translateY(200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(100);
-      opacity: 1;
-    }
+}
+
+@-o-keyframes slideInBottom {
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
   }
+
+  100% {
+    transform: translateY(100);
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes slideInBottom {
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(100);
+    opacity: 1;
+  }
+}
 
 .slideFromBottom {
   overflow: hidden;
@@ -307,181 +336,186 @@ body {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
+}
+
+@-moz-keyframes FadeInAnimation {
+  0% {
+    opacity: 0;
   }
-  @-moz-keyframes FadeInAnimation {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+
+  100% {
+    opacity: 1;
   }
-  @-webkit-keyframes FadeInAnimation {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+}
+
+@-webkit-keyframes FadeInAnimation {
+  0% {
+    opacity: 0;
   }
-  
-  @-o-keyframes FadeInAnimation {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+
+  100% {
+    opacity: 1;
   }
-  
-  @-ms-keyframes FadeInAnimation {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+}
+
+@-o-keyframes FadeInAnimation {
+  0% {
+    opacity: 0;
   }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes FadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 
 .fadeIn {
   overflow: hidden;
-  animation-timing-function: ease-in;
-  animation-delay: 4s;
-  animation: FadeInAnimation 3.5s;
-  -webkit-animation: FadeInAnimation 3.5s;
-  -moz-animation: FadeInAnimation 3.5s;
-  -o-animation: FadeInAnimation 3.5s;
-  -ms-animation: FadeInAnimation 3.5s;
+  animation: FadeInAnimation 4s ease-in-out;
+  -webkit-animation: FadeInAnimation 4s ease-in-out;
+  -moz-animation: FadeInAnimation 4s ease-in-out;
+  -o-animation: FadeInAnimation 4s ease-in-out;
+  -ms-animation: FadeInAnimation 4s ease-in-out;
 }
 
 @keyframes BorderScale {
   0% {
-    transform: translate(-200%);
+    transform: scale(0);
     opacity: 0;
   }
+
   100% {
-    transform: translateX(100);
+    transform: scale(1);
     opacity: 1;
   }
-  }
-  @-moz-keyframes BorderScale {
-      0% {
-    transform: translateX(-200%);
+}
+
+@-moz-keyframes BorderScale {
+  0% {
+    transform: scale(0);
     opacity: 0;
   }
+
   100% {
-    transform: translateX(100);
+    transform: scale(1);
     opacity: 1;
   }
-  }
-  @-webkit-keyframes BorderScale {
-      0% {
-    transform: translateX(-200%);
+}
+
+@-webkit-keyframes BorderScale {
+  0% {
+    transform: scale(0);
     opacity: 0;
   }
+
   100% {
-    transform: translateX(100);
+    transform: scale(1);
     opacity: 1;
   }
-  }
-  
-  @-o-keyframes BorderScale {
-      0% {
-    transform: translateX(-200%);
+}
+
+@-o-keyframes BorderScale {
+  0% {
+    transform: scale(0);
     opacity: 0;
   }
+
   100% {
-    transform: translateX(100);
+    transform: scale(1);
     opacity: 1;
   }
-  }
-  
-  @-ms-keyframes BorderScale {
-      0% {
-    transform: translateX(-200%);
+}
+
+@-ms-keyframes BorderScale {
+  0% {
+    transform: scale(0);
     opacity: 0;
   }
+
   100% {
-    transform: translateX(100);
+    transform: scale(1);
     opacity: 1;
   }
-  }
+}
 
 .borderScale {
   overflow: hidden;
-  animation-timing-function: ease-in;
-  animation-delay: 4.5s;
-  animation: BorderScale 4.5s;
-  -webkit-animation: BorderScale 4.5s;
-  -moz-animation: BorderScale 4.5s;
-  -o-animation: BorderScale 4.5s;
-  -ms-animation: BorderScale 4.5s;
+  animation: BorderScale 4.5s ease-in-out;
+  -webkit-animation: BorderScale 4.5s ease-in-out;
+  -moz-animation: BorderScale 4.5s ease-in-out;
+  -o-animation: BorderScale 4.5s ease-in-out;
+  -ms-animation: BorderScale 4.5s ease-in-out;
 }
 
 /* Animation for the maintenance page  */
-@keyframes StarTranslate {
+@keyframes MaintenanceAnimation {
   0% {
-    opacity: 0.8;
-    transform: translate(0, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(100%, 100%);
-  }
-  }
-  @-moz-keyframes StarTranslate {
-    0% {
-      opacity: 0.8;
-      transform: translate(0, 0);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(100%, 100%);
-    }
-  }
-  @-webkit-keyframes StarTranslate {
-    0% {
-      opacity: 0.8;
-      transform: translate(0, 0);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(100%, 100%);
-    }
-  }
-  
-  @-o-keyframes StarTranslate {
-    0% {
-      opacity: 0.8;
-      transform: translate(0, 0);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(100%, 100%);
-    }
-  }
-  
-  @-ms-keyframes StarTranslate {
-    0% {
-      opacity: 0.8;
-      transform: translate(0, 0);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(100%, 100%);
-    }
+    transform: rotate(0turn);
   }
 
-.starTranslate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@-moz-keyframes MaintenanceAnimation {
+  0% {
+    transform: rotate(0turn);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@-webkit-keyframes MaintenanceAnimation {
+  0% {
+    transform: rotate(0turn);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@-o-keyframes MaintenanceAnimation {
+  0% {
+    transform: rotate(0turn);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@-ms-keyframes MaintenanceAnimation {
+  0% {
+    transform: rotate(0turn);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.maintenanceAnimation {
   overflow: hidden;
-  animation-timing-function: ease-in;
-  animation-delay: 4.5s;
-  animation: StarTranslate 4.5s;
-  -webkit-animation: StarTranslate 4.5s;
-  -moz-animation: StarTranslate 4.5s;
-  -o-animation: StarTranslate 4.5s;
-  -ms-animation: StarTranslate 4.5s;
+  animation: MaintenanceAnimation 10s linear infinite;
+  -webkit-animation: MaintenanceAnimation 10s linear infinite;
+  -moz-animation: MaintenanceAnimation 10s linear infinite;
+  -o-animation: MaintenanceAnimation 10s linear infinite;
+  -ms-animation: MaintenanceAnimation 10s linear infinite;
 }

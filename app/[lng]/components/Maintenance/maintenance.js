@@ -1,22 +1,14 @@
 "use client";
-import { GiFallingStar } from "react-icons/gi";
+import { BsGear } from "react-icons/bs";
 
-export default function Maintenance({ status }) {
+export default function Maintenance({ status, text }) {
   return (
     <>
       {/* Main container */}
-      <div className="relative w-[100%] h-[100%] screen starTranslate">
-        <p className="w-full">{status}</p>
-        {/* containers for the falling stars animation */}
-        <div className="absolute w-full top-[-3rem] left-[10rem]">
-          <GiFallingStar color={"#fff"} style={{ fontSize: 26 }} />
-        </div>
-        <div className="absolute top-[10rem] left-[-5rem]">
-          <GiFallingStar color={"#fff"} style={{ fontSize: 28 }} />
-        </div>
-        <div className="absolute top-[-3rem] left-[1rem]">
-          <GiFallingStar color={"#fff"} style={{ fontSize: 30 }} />
-        </div>       
+      <div className="screen w-full flex-col items-center h-screen flex gap-16">
+        <p className="text-lg">{status}</p>    
+        <BsGear color={"#fff"} style={{ fontSize: 120 }} className="maintenanceAnimation"/>
+        <p className="">{text}</p>    
       </div>
     </>
   );

@@ -33,6 +33,6 @@ export async function generateMetadata({ params: { lng } }) {
 export default async function Projets({ params: { lng } }) {
 
   return (
-    <Maintenance status={'Maintenance'}/>
+    <Maintenance status={'Coding in progress'} text={'This page will display a map providing key stones of my journey'}/>
   )
 }

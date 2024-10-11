@@ -16,6 +16,12 @@ body {
   color: rgb(241, 245, 249);
 }
 
+@layer components {
+  .btn-primary {
+    @apply py-2 px-5 bg-white/30 text-white font-semibold rounded-lg shadow-md ring ring-1 ring-inset ring-white ring-offset-0 transition ease-in-out duration-300 hover:bg-white focus:outline-none focus:ring focus:ring-slate-300;
+  }
+}
+
 /* Overlapped Titles component */
 /* Setting the overlap so the letters will be a little over each other */
 .overlap {

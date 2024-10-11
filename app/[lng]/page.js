@@ -30,19 +30,29 @@ export async function generateMetadata({ params: { lng } }) {
 export default async function Home({ params: { lng } }) {
   const { t } = await useTranslation(lng, "homepage");
   return (
-    <main className="flex min-h-screen screen flex-col items-center justify-start md:justify-around gap-y-12">
+    <main className="flex h-screen screen flex-col items-center justify-start md:justify-around">
+      {/* Title Animation */}
       <div className="slideFromTop">
-      <OverLappedTitle lng={lng} title={t("title")} /></div>
+      <OverLappedTitle lng={lng} title={t("title")} />
+      </div>
+      {/* FirstLine Container */}
+      <div className="h-[100%]">
       <FirstLine
         lng={lng}
         title={t("title")}
         name={t("name")}
         job={t("job")}
+        job2={t("job2")}
+        frontend={t("frontend")}
+        frontendDescription={t("frontendDescription")}
+        backend={t("backend")}
+        backendDescritpion={t("backendDescription")}
         text={t("text")}
         textLg={t("textLg")}
         cv={t("cv")}
         contact={t("contact")}
       />
+      </div>
       {/*  <Nature />*/}
     </main>
   );

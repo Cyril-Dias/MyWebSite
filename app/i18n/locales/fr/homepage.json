@@ -1,9 +1,14 @@
 {
     "title": "Hello World !",
     "contact": "Me contacter",
-    "job": "Je suis à la recherche d'une alternance comme développeur Full-stack, n'hésitez pas à me contacter !",
-    "text": "Développeur Web </br> Spécialisation Frontend",
-    "textLg": "Développeur Web / Spécialisation Frontend",
+    "job": "En tant que développeur web full stack, je conçois et développe des applications web complètes, en maîtrisant à la fois le",
+    "job2": " J'utilise des technologies variées, comme HTML, CSS, JavaScript pour le frontend, et des langages comme Node.js, PHP pour le backend. Je m'occupe également de l'intégration des bases de données, de la gestion des API et de la sécurité des applications. Mon objectif est de garantir une expérience utilisateur fluide tout en assurant la robustesse et la scalabilité du système.",
+    "frontend": "frontend",
+    "frontendDescription": "(la partie visible par les utilisateurs)",
+    "backend": "backend",
+    "backendDescription": "(la partie visible par les utilisateurs)",
+    "text": "Développeur Web Full Stack </br> Spécialisation Frontend",
+    "textLg": "Développeur Web Full Stack / Spécialisation Frontend",
     "name": "Cyril Dias",
     "cv": "Mon CV"
     }

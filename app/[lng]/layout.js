@@ -16,8 +16,8 @@ export default function RootLayout({
   return (
     <html lang={lng} dir={dir(lng)}>
       <head />
-      <body>
-        <header>
+      <body className='relative'>
+        <header className='absolute bottom-0'>
               <Navbar lng={lng} />
         </header>
         {children}

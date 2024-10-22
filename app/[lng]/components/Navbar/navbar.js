@@ -1,17 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "../../../i18n/client";
 import { languages } from "../../../i18n/settings";
 import { GoHome, GoHomeFill } from "react-icons/go";
 import { FaFileCode, FaRegFileCode } from "react-icons/fa6";
 import {
-  IoChevronForward,
   IoChevronBack,
-  IoPerson,
-  IoPersonOutline,
   IoLocation,
   IoLocationOutline,
   IoGlobe,

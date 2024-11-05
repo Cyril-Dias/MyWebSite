@@ -4,8 +4,9 @@ import FirstLine from "./components/Home/header";
 
 // import Nature from './projets/carousels/nature'
 
-export async function generateMetadata({ params: { lng } }) {
+export async function generateMetadata({ params }) {
   // read route params
+  const {lng} = await params 
   const meta = {
     fr: {
       title: "Cyril Dias Developpeur Web Full-stack",
@@ -28,7 +29,8 @@ export async function generateMetadata({ params: { lng } }) {
   };
 }
 
-export default async function Home({ params: { lng } }) {
+export default async function Home({ params }) {
+  const {lng} = await params 
   const { t } = await useTranslation(lng, "homepage");
   return (
     <main className="flex h-screen screen flex-col items-center justify-start md:justify-around">

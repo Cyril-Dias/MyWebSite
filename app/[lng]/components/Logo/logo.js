@@ -18,7 +18,7 @@ export default function Logo() {
           <defs>
             <filter id="shadow">
               <feDropShadow dx="0" dy="0" stdDeviation="3"
-                flood-color="LightCyan" />
+                floodColor="LightCyan" />
             </filter>
           </defs>
           <g
@@ -169,7 +169,6 @@ export default function Logo() {
             </g>
           </g>
         </svg>
-
       </div>
       {/* Script to animate Logo with GSAP */}
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"

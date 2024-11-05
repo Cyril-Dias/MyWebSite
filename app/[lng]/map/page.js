@@ -1,7 +1,8 @@
 import Maintenance from '../components/Maintenance/maintenance'
 
-export async function generateMetadata({ params: { lng } }) {
+export async function generateMetadata({ params }) {
   // read route params
+  const {lng} = await params 
   const meta = {
     fr: {
       title: "Mes projets dev",
@@ -30,8 +31,8 @@ export async function generateMetadata({ params: { lng } }) {
 }
 
 
-export default async function Projets({ params: { lng } }) {
-
+export default async function Projets({ params }) {
+  const {lng} = await params 
   return (
     <Maintenance status={'Coding in progress'} text={'This page will display a map providing key stones of my journey'}/>
   )

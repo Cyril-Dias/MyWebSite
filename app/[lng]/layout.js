@@ -4,16 +4,13 @@ import Navbar from './components/Navbar/navbar'
 import Logo from "./components/Logo/logo";
 import "./globals.css";
 
-export async function generateStaticParams() {
+export async function generateStaticParams({ params }) {
+  const { lng } = await params
   return languages.map((lng) => ({ lng }))
 }
 
-export default function RootLayout({
-  children,
-  params: {
-    lng
-  }
-}) {
+export default async function RootLayout({ children, params }) {
+  const { lng } = await params
   return (
     <html lang={lng} dir={dir(lng)}>
       <head />

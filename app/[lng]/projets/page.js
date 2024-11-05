@@ -1,7 +1,8 @@
 import Carousels from './carousels/page'
 
-export async function generateMetadata({ params: { lng } }) {
+export async function generateMetadata({ params }) {
   // read route params
+  const {lng} = await params 
   const meta = {
     fr: {
       title: "Mes projets dev",
@@ -30,8 +31,8 @@ export async function generateMetadata({ params: { lng } }) {
 }
 
 
-export default async function Projets({ params: { lng } }) {
-
+export default async function Projets({ params }) {
+  const {lng} = await params 
   return (
   <div className='screen'>
     <Carousels lng={lng} />

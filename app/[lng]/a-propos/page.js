@@ -1,5 +1,6 @@
-export async function generateMetadata({ params: { lng } }) {
+export async function generateMetadata({ params }) {
   // read route params
+  const {lng} = await params 
   const meta = {
     fr: {
       title: "Cyril Dias Dev Full stack| A propos de moi",
@@ -28,8 +29,8 @@ export async function generateMetadata({ params: { lng } }) {
 }
 
 
-export default async function Projets({ params: { lng } }) {
-
+export default async function Projets({ params }) {
+  const {lng} = await params 
   return (
     <div><h1>{lng}</h1></div>
   )

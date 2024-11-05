@@ -1,6 +1,7 @@
 import { dir } from 'i18next'
 import { languages } from '../i18n/settings'
 import Navbar from './components/Navbar/navbar'
+import Logo from "./components/Logo/logo";
 import "./globals.css";
 
 export async function generateStaticParams() {
@@ -17,8 +18,11 @@ export default function RootLayout({
     <html lang={lng} dir={dir(lng)}>
       <head />
       <body className='relative'>
-        <header className='absolute bottom-0'>
-              <Navbar lng={lng} />
+        <header>
+          <div className='absolute bottom-0'>
+            <Navbar lng={lng} /> 
+          </div>
+            <Logo />     
         </header>
         {children}
       </body>

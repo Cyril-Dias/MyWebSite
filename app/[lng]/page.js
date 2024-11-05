@@ -1,6 +1,7 @@
 import { useTranslation } from "../i18n";
 import OverLappedTitle from "./components/Titles/overlapped";
 import FirstLine from "./components/Home/header";
+
 // import Nature from './projets/carousels/nature'
 
 export async function generateMetadata({ params: { lng } }) {

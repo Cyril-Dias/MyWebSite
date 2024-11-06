@@ -530,7 +530,9 @@ body {
     }
 
 /* Logo Animation  */
-    .svgStyle {
-      color: #c2410c;
-      font-size: 3rem;
-    }
+.logo {
+  opacity: 0;
+}
+.nameFirst, .nameLast {
+  opacity: 0;
+}

@@ -19,7 +19,7 @@ export default function Navbar({ lng }) {
   const pathname = usePathname();
   const { t } = useTranslation(lng, "navbar");
   const [menuActive, setMenuActive] = useState(true);
-  const [lngActive, setLngActive] = useState(false);
+  const [lngActive, setLngActive] = useState();
   const handleLngActive = (e) => {
     e.stopPropagation();
     setLngActive(!lngActive);
@@ -55,15 +55,6 @@ export default function Navbar({ lng }) {
               )}
             </Link>
           </li>
-          {/* <li>
-            <Link href={`/${lng}/a-propos`}>
-              {pathname === `/${lng}/a-propos` ? (
-                <IoPerson color={"#fff"} style={{ fontSize: 25 }} />
-              ) : (
-                <IoPersonOutline color={"#fff"} style={{ fontSize: 25 }} />
-              )}
-            </Link>
-          </li> */}
           <li>
             <Link href={`/${lng}/map`}>
               {pathname === `/${lng}/map` ? (
@@ -78,11 +69,12 @@ export default function Navbar({ lng }) {
             {lngActive ? (
               <>
                 <div className="relative flex justify-center items-center h-full w-full">
-                  <IoGlobe
-                    color={"#fff"}
-                    style={{ fontSize: 25 }}
-                    onClick={(e) => handleLngActive(e)}
-                  />
+                  <div className="absolute flex justify-center top-5 z-10">
+                    <IoGlobe
+                      color={"#fff"}
+                      style={{ fontSize: 25, cursor: 'pointer' }}
+                      onClick={(e) => handleLngActive(e)}
+                    /></div>
                   <div className="absolute -top-10 w-[30px] h-[90px] bg-white/30 rounded-lg">
                     <div className="flex flex-col h-full text-center mt-2">
                       {languages
@@ -100,7 +92,11 @@ export default function Navbar({ lng }) {
                             </div>
                           );
                         })}
-                      <span className="font-bold text-sm">{t(lng)}</span>
+                      <span
+                        onClick={(e) => handleLngActive(e)}
+                        className="font-bold text-sm cursor-pointer">
+                        {t(lng)}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -108,7 +104,7 @@ export default function Navbar({ lng }) {
             ) : (
               <IoGlobeOutline
                 color={"#fff"}
-                style={{ fontSize: 25 }}
+                style={{ fontSize: 25, cursor: 'pointer' }}
                 onClick={(e) => handleLngActive(e)}
               />
             )}
@@ -146,7 +142,7 @@ export default function Navbar({ lng }) {
               <ol className="grid grid-cols-4 justify-items-center">
                 {t("menu", { returnObjects: true }).map((item, index) => (
                   <li className="flex justify-center h-full w-full" key={index}>
-                    <Link href={`/${lng}/${item.href}`} className="text-center text-lg cursor-pointer hover:text-slate-400">
+                    <Link href={`/${lng}/${item.href}`} className="text-center text-lg cursor-pointer hover:text-slate-400 transition ease-in duration-300">
                       {item.name}
                     </Link>
                   </li>
@@ -154,8 +150,8 @@ export default function Navbar({ lng }) {
 
                 <li className="flex justify-center h-full w-full">
                   <div className="flex justify-items-center space-x-2">
-                    <IoGlobeOutline color={"#fff"} style={{ fontSize: 25 }} />
-                    <span className="font-bold hover:cursor-pointer hover:text-slate-400">
+                    <IoGlobeOutline color={"#fff"} style={{ fontSize: 25, cursor: 'pointer' }} />
+                    <span className="font-bold hover:cursor-pointer hover:text-slate-400 transition ease-in duration-300">
                       {t(lng)}
                     </span>
                     {languages
@@ -163,8 +159,8 @@ export default function Navbar({ lng }) {
                       .map((l, index) => {
                         return (
                           <div key={l} className="space-x-2 items-center">
-                            <span className="">/</span>
-                            <span className="text-xs hover:text-slate-400">
+                            <span className="text-white">/</span>
+                            <span className="text-slate-400 hover:text-white transition ease-in duration-300">
                               {index > 0 && " or "}
                               <Link href={`/${l}`}>{t(l)}</Link>
                             </span>

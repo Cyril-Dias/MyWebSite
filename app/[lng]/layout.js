@@ -1,7 +1,7 @@
 import { dir } from 'i18next'
 import { languages } from '../i18n/settings'
 import Navbar from './components/Navbar/navbar'
-import Logo from "./components/Logo/logo";
+import NewLogo from "./components/Logo/logoNew";
 import "./globals.css";
 
 export async function generateStaticParams({ params }) {
@@ -19,7 +19,7 @@ export default async function RootLayout({ children, params }) {
           <div className='absolute bottom-0'>
             <Navbar lng={lng} /> 
           </div>
-            <Logo />     
+            <NewLogo />     
         </header>
         {children}
       </body>

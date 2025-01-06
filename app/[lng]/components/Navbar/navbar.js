@@ -20,16 +20,18 @@ export default function Navbar({ lng }) {
   const { t } = useTranslation(lng, "navbar");
   const [menuActive, setMenuActive] = useState(true);
   const [lngActive, setLngActive] = useState();
+  const [lngHovered, setLngHovered] = useState(true);
+  const handleMouseLng = () => setLngHovered(!lngHovered);
   const handleLngActive = (e) => {
     e.stopPropagation();
     setLngActive(!lngActive);
   };
 
   // Position of MouseGlow for large screen
-  const [position, setPosition] = useState({
-    x: -20,
-    y: -20,
-  });
+  // const [position, setPosition] = useState({
+  //   x: -20,
+  //   y: -20,
+  // });
 
   return (
     <>
@@ -114,20 +116,23 @@ export default function Navbar({ lng }) {
       {/* Larger screen Component */}
       <div
         className="hidden lg:flex w-screen h-max fixed top-0 p-10 backdrop-blur bg-slate-900/75 z-30"
-        onPointerMove={(e) => {
-          setPosition({
-            x: e.clientX,
-            y: e.clientY,
-          });
-        }}
-        onMouseLeave={() => {
-          setPosition({ x: -0, y: -0 });
-        }}
+      // /!\ Mouse Glowing effect 
+      // onPointerMove={(e) => {
+      //   setPosition({
+      //     x: e.clientX,
+      //     y: e.clientY,
+      //   });
+      // }}
+      // onMouseLeave={() => {
+      //   setPosition({ x: -0, y: -0 });
+      // }}
       >
         {menuActive ? (
           <>
+
             <div className="relative w-full h-full">
-              <div
+              {/*  Mouse Glow Effect */}
+              {/* <div
                 className="hidden lg:flex bg-teal-500 blur-lg -z-10"
                 style={{
                   position: "absolute",
@@ -138,7 +143,7 @@ export default function Navbar({ lng }) {
                   width: 20,
                   height: 20,
                 }}
-              />
+              /> */}
               <ol className="grid grid-cols-4 justify-items-center">
                 {t("menu", { returnObjects: true }).map((item, index) => (
                   <li className="flex justify-center h-full w-full" key={index}>
@@ -151,16 +156,28 @@ export default function Navbar({ lng }) {
                 <li className="flex justify-center h-full w-full">
                   <div className="flex justify-items-center space-x-2">
                     <IoGlobeOutline color={"#fff"} style={{ fontSize: 25, cursor: 'pointer' }} />
-                    <span className="font-bold hover:cursor-pointer hover:text-slate-400 transition ease-in duration-300">
+                    {lngHovered ? (
+                      <span className="font-bold hover:cursor-pointer">
+                        {t(lng)}
+                      </span>
+                    ) : (
+                      <span className="font-bold hover:cursor-pointer text-slate-400 transition ease-in duration-300">
+                        {t(lng)}
+                      </span>
+                    )}
+                    {/* <span className="font-bold hover:cursor-pointer hover:text-slate-400 transition ease-in duration-300">
                       {t(lng)}
-                    </span>
+                    </span> */}
                     {languages
                       .filter((l) => lng !== l)
                       .map((l, index) => {
                         return (
                           <div key={l} className="space-x-2 items-center">
                             <span className="text-white">/</span>
-                            <span className="text-slate-400 hover:text-white transition ease-in duration-300">
+                            <span
+                              onMouseEnter={handleMouseLng}
+                              onMouseLeave={handleMouseLng}
+                              className="text-slate-400 hover:text-white transition ease-in duration-300">
                               {index > 0 && " or "}
                               <Link href={`/${l}`}>{t(l)}</Link>
                             </span>

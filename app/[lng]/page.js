@@ -33,9 +33,10 @@ export default async function Home({ params }) {
   const {lng} = await params 
   const { t } = await useTranslation(lng, "homepage");
   return (
-    <main className="flex h-screen screen flex-col items-center justify-start md:justify-around">
+    <main className="h-screen w-screen screen">
+      <div className="flex flex-col mt-6 gap-y-6 items-center justify-start md:justify-around">
       {/* Title Animation */}
-      <div className="slideFromTop">
+      <div className="w-full slideFromTop">
       <OverLappedTitle lng={lng} title={t("title")} />
       </div>
       {/* FirstLine Container */}
@@ -57,6 +58,7 @@ export default async function Home({ params }) {
       />
       </div>
       {/*  <Nature />*/}
+      </div>
     </main>
   );
 }

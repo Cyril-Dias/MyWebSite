@@ -19,7 +19,7 @@ export default function FirstLine({ name, job, job2, frontend, frontendDescripti
           onMouseLeave={handleMouseLeave}
           className="relative flex flex-col h-[100%] w-[100vw] pb-20 md:w-[80%] xl:w-[65%] md:rounded-2xl md:bg-slate-200/20 md:hover:bg-slate-100/90 md:hover:text-slate-700 md:ease-in-out md:duration-500 overflow-hidden">
           {/* Flex-row container for the first flex-col items: text & image */}
-          <div className="flex flex-row">
+          <div className="flex flex-row relative">
             {/* Small screen display */}
             <div className="flex flex-col md:hidden mt-6 ml-4 mr-2 md:m-8 fadeIn">
               <p className="w-full text-[1.75rem] mb-4">{name}</p>
@@ -45,8 +45,8 @@ export default function FirstLine({ name, job, job2, frontend, frontendDescripti
                 dangerouslySetInnerHTML={{ __html: text }}
               ></p>
               {/* Lg text display */}
-              <p className="w-max text-[1.5rem] hidden lg:flex mb-6">{textLg}</p>
-              <p className="text-base md:text-xl fadeIn">
+              <p className="w-full text-[1.5rem] hidden lg:flex mb-6">{textLg}</p>
+              <p className="w-full text-base md:text-xl fadeIn">
                 {job}
                 <span>{frontend}</span>
                 <span>{frontendDescription}</span> &
@@ -56,13 +56,13 @@ export default function FirstLine({ name, job, job2, frontend, frontendDescripti
               </p>
             </div>
             {/* Image container */}
-            <div className="hidden lg:flex slideFromRight w-max h-full rounded-l-full shadow-xl">
+            <div className="hidden lg:flex absolute -top-2 -right-2 slideFromRight w-max h-[100%] rounded-l-full shadow-xl">
               <Image
                 className="h-full object-cover"
                 src={profilPicture}
                 alt="Profil Picture"
-                width={500}
-                height={500}
+                width={300}
+                height={300}
               />
             </div>
           </div>

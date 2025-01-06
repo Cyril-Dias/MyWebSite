@@ -63,8 +63,14 @@ body {
         opacity: 0;
       }
 
+      50% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
       100% {
-        transform: translateX(100);
+        transform-origin: top right;
+        transform: scale(50%);
         opacity: 1;
       }
     }
@@ -75,8 +81,14 @@ body {
         opacity: 0;
       }
 
+      50% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
       100% {
-        transform: translateX(100);
+        transform-origin: top right;
+        transform: scale(50%);
         opacity: 1;
       }
     }
@@ -87,8 +99,14 @@ body {
         opacity: 0;
       }
 
+      50% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
       100% {
-        transform: translateX(100);
+        transform-origin: top right;
+        transform: scale(50%);
         opacity: 1;
       }
     }
@@ -99,8 +117,14 @@ body {
         opacity: 0;
       }
 
+      50% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
       100% {
-        transform: translateX(100);
+        transform-origin: top right;
+        transform: scale(50%);
         opacity: 1;
       }
     }
@@ -111,8 +135,14 @@ body {
         opacity: 0;
       }
 
+      50% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
       100% {
-        transform: translateX(100);
+        transform-origin: top right;
+        transform: scale(50%);
         opacity: 1;
       }
     }
@@ -120,11 +150,12 @@ body {
     .slideFromRight {
       overflow: hidden;
       animation-timing-function: ease-in;
-      animation: slideInRight 5s;
-      -webkit-animation: slideInRight 5s;
-      -moz-animation: slideInRight 5s;
-      -o-animation: slideInRight 5s;
-      -ms-animation: slideInRight 5s;
+      animation: slideInRight 5s forwards;
+      -webkit-animation: slideInRight 5s forwards;
+      -moz-animation: slideInRight 5s forwards;
+      -o-animation: slideInRight 5s forwards;
+      -ms-animation: slideInRight 5s forwards;
+      
     }
 
 /* Slide in from left animation for header text components/Home/header */
@@ -135,7 +166,7 @@ body {
       }
 
       100% {
-        transform: translateX(100);
+        transform: translateX(0);
         opacity: 1;
       }
     }
@@ -147,7 +178,7 @@ body {
       }
 
       100% {
-        transform: translateX(100);
+        transform: translateX(0);
         opacity: 1;
       }
     }
@@ -159,7 +190,7 @@ body {
       }
 
       100% {
-        transform: translateX(100);
+        transform: translateX(0);
         opacity: 1;
       }
     }
@@ -171,7 +202,7 @@ body {
       }
 
       100% {
-        transform: translateX(100);
+        transform: translateX(0);
         opacity: 1;
       }
     }
@@ -183,7 +214,7 @@ body {
       }
 
       100% {
-        transform: translateX(100);
+        transform: translateX(0);
         opacity: 1;
       }
     }
@@ -191,11 +222,11 @@ body {
     .slideFromLeft {
       overflow: hidden;
       animation-timing-function: ease-in;
-      animation: slideInLeft 3.5s;
-      -webkit-animation: slideInLeft 3.5s;
-      -moz-animation: slideInLeft 3.5s;
-      -o-animation: slideInLeft 3.5s;
-      -ms-animation: slideInLeft 3.5s;
+      animation: slideInLeft 3s;
+      -webkit-animation: slideInLeft 3s;
+      -moz-animation: slideInLeft 3s;
+      -o-animation: slideInLeft 3s;
+      -ms-animation: slideInLeft 3s;
     }
 
 /* Slide in from top animation for homepage H1 */
@@ -206,7 +237,7 @@ body {
       }
 
       100% {
-        transform: translateY(100);
+        transform: translateY(0);
         opacity: 1;
       }
     }
@@ -218,7 +249,7 @@ body {
       }
 
       100% {
-        transform: translateY(100);
+        transform: translateY(0);
         opacity: 1;
       }
     }
@@ -230,7 +261,7 @@ body {
       }
 
       100% {
-        transform: translateY(100);
+        transform: translateY(0);
         opacity: 1;
       }
     }
@@ -242,7 +273,7 @@ body {
       }
 
       100% {
-        transform: translateY(100);
+        transform: translateY(0);
         opacity: 1;
       }
     }
@@ -254,7 +285,7 @@ body {
       }
 
       100% {
-        transform: translateY(100);
+        transform: translateY(0);
         opacity: 1;
       }
     }
@@ -277,7 +308,7 @@ body {
       }
 
       100% {
-        transform: translateY(100);
+        transform: translateY(0);
         opacity: 1;
       }
     }
@@ -289,7 +320,7 @@ body {
       }
 
       100% {
-        transform: translateY(100);
+        transform: translateY(0);
         opacity: 1;
       }
     }
@@ -301,7 +332,7 @@ body {
       }
 
       100% {
-        transform: translateY(100);
+        transform: translateY(0);
         opacity: 1;
       }
     }
@@ -313,7 +344,7 @@ body {
       }
 
       100% {
-        transform: translateY(100);
+        transform: translateY(0);
         opacity: 1;
       }
     }
@@ -325,19 +356,19 @@ body {
       }
 
       100% {
-        transform: translateY(100);
+        transform: translateY(0);
         opacity: 1;
       }
     }
 
     .slideFromBottom {
       overflow: hidden;
-      animation-timing-function: ease-in;
-      animation: slideInBottom 4s;
-      -webkit-animation: slideInBottom 4s;
-      -moz-animation: slideInBottom 4s;
-      -o-animation: slideInBottom 4s;
-      -ms-animation: slideInBottom 4s;
+      animation-timing-function: ease-in-out;
+      animation: slideInBottom 3s;
+      -webkit-animation: slideInBottom 2s;
+      -moz-animation: slideInBottom 2s;
+      -o-animation: slideInBottom 2s;
+      -ms-animation: slideInBottom 2s;
     }
 
 /* Fade in animation for header text components/Home/header */

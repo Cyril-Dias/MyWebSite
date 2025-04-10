@@ -6,7 +6,7 @@ import FirstLine from "./components/Home/header";
 
 export async function generateMetadata({ params }) {
   // read route params
-  const {lng} = await params 
+  const { lng } = await params
   const meta = {
     fr: {
       title: "Cyril Dias Developpeur Web Full-stack",
@@ -30,32 +30,30 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Home({ params }) {
-  const {lng} = await params 
+  const { lng } = await params
   const { t } = await useTranslation(lng, "homepage");
   return (
     <main className="h-screen w-screen screen">
-      <div className="flex flex-col mt-6 gap-y-6 items-center justify-start md:justify-around">
-      {/* Title Animation */}
-      <div className="w-full slideFromTop">
-      <OverLappedTitle lng={lng} title={t("title")} />
-      </div>
-      {/* FirstLine Container */}
-      <div className="h-[100%]">
-      <FirstLine
-        lng={lng}
-        title={t("title")}
-        name={t("name")}
-        job={t("job")}
-        job2={t("job2")}
-        job3={t("job3")}
-        text={t("text")}
-        textLg={t("textLg")}
-        portfolio={t("portfolio")}
-        cv={t("cv")}
-        contact={t("contact")}
-      />
-      </div>
-      {/*  <Nature />*/}
+      <div className="flex flex-col items-center justify-start md:justify-around">
+        {/* Title Animation */}
+        <div className="w-full slideFromTop">
+          <OverLappedTitle lng={lng} title={t("title")} />
+        </div>
+        {/* FirstLine Container */}
+        <div className="h-[100%]">
+          <FirstLine
+            lng={lng}
+            title={t("title")}
+            name={t("name")}
+            job={t("job")}
+            job2={t("job2")}
+            job3={t("job3")}
+            text={t("text")}
+            textLg={t("textLg")}
+            portfolio={t("portfolio")}
+            contact={t("contact")}
+          />
+        </div>
       </div>
     </main>
   );

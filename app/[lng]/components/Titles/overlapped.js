@@ -26,12 +26,10 @@ export default function OverLappedTitle({ title }) {
       <div className="">
         {/* Interactive title only for md and larger screens */}
         <h1
-          className={`${inter.className} hidden md:flex justify-center mx-4 w-full uppercase text-center text-[3rem] md:text-[4rem] font-bold overlap overlap-front z-10 ease-in-out duration-500`}
+          className={`${inter.className} hidden md:block mx-auto my-8 w-max uppercase text-center text-[3rem] md:text-[4rem] font-bold overlap overlap-front z-10 ease-in-out duration-500`}
         >
           {title}
         </h1>
-        {/* small screen display */}
-        <p className="flex md:hidden text-3xl"> {title}</p>
       </div>
     </>
   );

@@ -175,7 +175,7 @@ export default function Logo() {
 
   return (
     <>
-      <div className="absolute top-8 left-14 z-50">
+      <div className="w-[90px] absolute top-8 right-4 md:left-14 z-50">
         {/* SVG Logo small */}
         <svg
           width="89"

@@ -16,13 +16,6 @@ body {
   background: 
   radial-gradient(circle at 20% 50%, #1e177d 0%, #000010 40%),
   radial-gradient(circle at 80% 50%, #8b22e7 0%, #000010 30%),
-  radial-gradient(ellipse 30% 20% at 50% 100%,
-    #e78b22 0%,
-    #bf6600 10%,
-    #804400 25%,
-    #402200 40%,
-    #000010b3 60%,
-    #000010 90%),
   #000010;
 background-blend-mode: lighten;
   color: rgb(241, 245, 249);
@@ -30,7 +23,12 @@ background-blend-mode: lighten;
 
 @layer components {
   .btn-primary {
-    @apply py-2 px-5 bg-light/30 text-light font-semibold rounded-lg shadow-md ring ring-1 ring-inset ring-light ring-offset-0;
+    @apply py-2 px-5 bg-accent text-light font-semibold rounded-lg shadow-md ring ring-1 ring-inset ring-accent ring-offset-0;
+  }
+  @screen lg {
+    .btn-primary {
+      @apply bg-light/30 text-light ring-light;
+    }
   }
   .btn-primary-active {
     @apply py-2 px-5 bg-light/30 text-accent font-semibold rounded-lg shadow-md ring ring-1 ring-inset ring-accent ring-offset-0 transition ease-in-out duration-300 hover:bg-accent hover:ring-accent hover:text-light;
@@ -43,7 +41,7 @@ background-blend-mode: lighten;
       --overlap: .15ch;
       --shadow-offset: .1ch;
       --shadow-blur: .2ch;
-      --shadow-color: black;
+      --shadow-color: #000010;
       letter-spacing: calc(var(--overlap) * -0.8);
       isolation: isolate;
     }

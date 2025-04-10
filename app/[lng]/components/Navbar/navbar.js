@@ -109,7 +109,7 @@ export default function Navbar({ lng }) {
       </div>
       {/* Larger screen Component */}
       <div
-        className="hidden lg:flex w-screen h-max fixed top-0 p-10 backdrop-blur-lg bg-indigo-950/20 z-30"
+        className="hidden lg:flex w-screen h-max fixed top-0 p-10 backdrop-blur-lg bg-indigo-950/20 z-50"
       >
         {menuActive ? (
           <>
@@ -117,7 +117,7 @@ export default function Navbar({ lng }) {
               <ol className="grid grid-cols-4 justify-items-center">
                 {t("menu", { returnObjects: true }).map((item, index) => (
                   <li className="flex justify-center h-full w-full" key={index}>
-                    <Link href={`/${lng}/${item.href}`} className="text-center text-lg cursor-pointer hover:text-light text-slate-400 transition ease-in duration-300">
+                    <Link href={`/${lng}/${item.href}`} className="text-center text-lg font-semibold cursor-pointer hover:text-light text-slate-400 transition ease-in duration-300">
                       {item.name}
                     </Link>
                   </li>

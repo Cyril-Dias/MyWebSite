@@ -47,12 +47,10 @@ export default async function Home({ params }) {
         name={t("name")}
         job={t("job")}
         job2={t("job2")}
-        frontend={t("frontend")}
-        frontendDescription={t("frontendDescription")}
-        backend={t("backend")}
-        backendDescritpion={t("backendDescription")}
+        job3={t("job3")}
         text={t("text")}
         textLg={t("textLg")}
+        portfolio={t("portfolio")}
         cv={t("cv")}
         contact={t("contact")}
       />

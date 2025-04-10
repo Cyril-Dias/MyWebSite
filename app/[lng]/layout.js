@@ -1,7 +1,7 @@
 import { dir } from 'i18next'
 import { languages } from '../i18n/settings'
 import Navbar from './components/Navbar/navbar'
-import NewLogo from "./components/Logo/logoNew";
+import Logo from "./components/Logo/logo";
 import "./globals.css";
 
 export async function generateStaticParams({ params }) {
@@ -13,13 +13,19 @@ export default async function RootLayout({ children, params }) {
   const { lng } = await params
   return (
     <html lang={lng} dir={dir(lng)}>
-      <head />
+      <head
+      >
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className='relative'>
         <header>
           <div className='absolute bottom-0'>
-            <Navbar lng={lng} /> 
+            <Navbar lng={lng} />
           </div>
-            <NewLogo />     
+          <Logo />
         </header>
         {children}
       </body>

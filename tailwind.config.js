@@ -13,7 +13,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-poppins)', ...fontFamily.sans],
+        sans: ['Satoshi', 'sans-serif'], // override `font-sans`
+      },
+      colors: {
+        primary: '#1e177d',  // Bleu
+        secondary: '#8b22e7', // Violet
+        accent: '#e78b22',    // Orange
+        dark: '#000010',      // Très sombre
+        light: '#f0f0f0',     // Clair pour les arrière-plans
       },
       gridTemplateRows: {
         // Simple 8 row grid

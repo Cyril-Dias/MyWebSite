@@ -126,11 +126,11 @@ export default function Navbar({ lng }) {
                   <div className="flex justify-items-center space-x-2">
                     <IoGlobeOutline color={"#fff"} style={{ fontSize: 25, cursor: 'pointer' }} />
                     {lngHovered ? (
-                      <span className="font-bold hover:cursor-pointer">
+                      <span className="font-bold text-slate-400 hover:cursor-pointer">
                         {t(lng)}
                       </span>
                     ) : (
-                      <span className="font-bold hover:cursor-pointer text-slate-400 transition ease-in duration-300">
+                      <span className="font-bold hover:cursor-pointer text-light transition ease-in duration-300">
                         {t(lng)}
                       </span>
                     )}
@@ -143,7 +143,7 @@ export default function Navbar({ lng }) {
                             <span
                               onMouseEnter={handleMouseLng}
                               onMouseLeave={handleMouseLng}
-                              className="text-slate-400 hover:text-white transition ease-in duration-300">
+                              className="text-slate-400 hover:text-light transition ease-in duration-300">
                               {index > 0 && " or "}
                               <Link href={`/${l}`}>{t(l)}</Link>
                             </span>

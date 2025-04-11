@@ -1,15 +1,53 @@
 "use client";
 
 import "../../globals.css";
-import Image from "next/image";
-import profilPicture from "../../../../public/profilPicture.webp";
 import { useState } from "react";
 
-export default function FirstLine({ name, job, job2, job3, text, textLg, portfolio, contact }) {
-  const [infoActive, setInfoActive] = useState(false);
+export default function FirstLine({ name, job, job2, job3, text, textLg, portfolio, contact, lng }) {
+
   const [hoverActive, setHover] = useState(false);
   const handleMouseEnter = () => setHover(true);
   const handleMouseLeave = () => setHover(false);
+
+  const motsColorésParLangue = {
+    fr: ['conçois', 'cadrage', 'développement full-stack', 'React', 'Next.js', 'Node.js', 'PHP', 'UX/UI', 'bases de données','API', 'sécurité', 'fluide', 'robustesse', 'scalabilité '],
+    en: ['design', 'develop', 'strategic planning', 'full-stack', 'React', 'Next.js', 'Node.js', 'PHP', 'database', 'API', 'security', 'smooth', 'robustness', 'scalability']
+  };
+
+  const motsColorés = motsColorésParLangue[lng] || ['fr']; //fallback fr
+
+  const coloriserMotsJSX = (texte, mots, isHovered) => {
+    const regex = new RegExp(`\\b(${mots.join('|')})\\b`, 'gi');
+    const morceaux = [];
+    let lastIndex = 0;
+
+    texte.replace(regex, (match, _groupe, index) => {
+      if (lastIndex !== index) {
+        morceaux.push(texte.slice(lastIndex, index));
+      }
+
+      morceaux.push(
+        <span
+          key={index}
+          className={`mot-coloré transition-colors duration-600 ${
+            isHovered ? 'text-accent font-semibold text-[1.20rem]' : ''
+          }`}
+        >
+          {match}
+        </span>
+      );
+
+      lastIndex = index + match.length;
+      return match;
+    });
+
+    if (lastIndex < texte.length) {
+      morceaux.push(texte.slice(lastIndex));
+    }
+
+    return morceaux;
+  };
+
   return (
     <>
       {/* main component container */}
@@ -17,7 +55,7 @@ export default function FirstLine({ name, job, job2, job3, text, textLg, portfol
         <div
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className="relative flex flex-col h-[100%] w-[100vw] pb-20 md:w-[80%] xl:w-[65%] md:rounded-2xl md:bg-light/20 md:hover:bg-light md:hover:text-indigo-900 md:ease-in-out md:duration-500 overflow-hidden">
+          className="relative flex flex-col h-[100%] w-[100vw] pb-20 md:w-[80%] xl:w-[65%] md:rounded-2xl md:bg-light/20 md:ease-in-out md:duration-500 overflow-hidden">
           {/* Flex-row container for the first flex-col items: text & image */}
           <div className="flex flex-row relative">
             {/* Small screen display */}
@@ -29,9 +67,7 @@ export default function FirstLine({ name, job, job2, job3, text, textLg, portfol
               ></p>
               <p className="h-full text-base md:text-md">{job}</p>
               <p className="h-full text-base md:text-md">{job2}</p>
-              <p className="h-full text-base md:text-md">
-                {job3}
-              </p>
+              <p className="h-full text-base md:text-md">{job3}</p>
             </div>
             {/* Larger Screen text display */}
             <div className="w-full h-max hidden md:flex flex-col m-8 fadeIn">
@@ -43,14 +79,14 @@ export default function FirstLine({ name, job, job2, job3, text, textLg, portfol
               ></p>
               {/* Lg text display */}
               <p className="w-full text-[1.5rem] hidden lg:flex mb-6 text-accent font-semibold">{textLg}</p>
-              <p className="w-full text-base md:text-xl fadeIn">
-                {job}
+              <p className="w-full text-[1rem] md:text-xl tracking-tight fadeIn">
+                {coloriserMotsJSX(job, motsColorés, hoverActive)}
               </p>
-              <p className="w-full text-base md:text-xl fadeIn">
-                {job2}
+              <p className="w-full text-[1rem] md:text-xl tracking-tight fadeIn">
+                {coloriserMotsJSX(job2, motsColorés, hoverActive)}
               </p>
-              <p className="w-full text-base md:text-xl fadeIn">
-                {job3}
+              <p className="w-full text-[1rem] md:text-xl tracking-tight fadeIn">
+                {coloriserMotsJSX(job3, motsColorés, hoverActive)}
               </p>
             </div>
           </div>

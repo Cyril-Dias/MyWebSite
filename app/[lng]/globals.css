@@ -11,11 +11,12 @@
 html {
   font-family: 'Satoshi', sans-serif;
 }
+
 /* BACKGROUNDS */
 body {
   background: 
-  radial-gradient(circle at 20% 50%, #1e177d 0%, #000010 40%),
-  radial-gradient(circle at 80% 50%, #8b22e7 0%, #000010 30%),
+  radial-gradient(circle at 20% 10%, #1e177d 0%, #000010 20%),
+  radial-gradient(circle at 80% 10%, #8b22e7 0%, #000010 20%),
   #000010;
 background-blend-mode: lighten;
   color: rgb(241, 245, 249);

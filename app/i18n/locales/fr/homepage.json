@@ -8,5 +8,69 @@
     "textLg": "Développeur Web Full Stack Freelance & Consultant Digital",
     "name": "CYRIL DIAS WEB DEVELOPMENT",
     "portfolio": "Portfolio",
-    "cv": "CV"
+    "chart" : {
+        "title": "Mes Compétences",
+        "services": "Développement web · Conseil digital · Gestion de projet",
+        "skills": [
+            { "skill": "Performance Web", "level": 90 },
+            { "skill": "Accessibilité", "level": 60 },
+            { "skill": "SEO", "level": 75 },
+            { "skill": "UX/UI", "level": 80 },
+            { "skill": "Tests / CI-CD", "level": 65 },
+            { "skill": "Coordination d'Équipe", "level": 90 },
+            { "skill": "Gestion de Projet Agile", "level": 75 },
+            { "skill": "Outils de Gestion de Projet", "level": 70 }
+        ]
+    },
+    "langChart" : {
+        "title": "Stack Technique",
+        "services": "Frontend · Backend · UX/UI",
+        "langSkills": [
+            { "langSkill": "Astro", "langLevel": 40 },
+            { "langSkill": "React", "langLevel": 90 },
+            { "langSkill": "Next.js", "langLevel": 85 },
+            { "langSkill": "Vue.js/Nuxt.js", "langLevel": 60 },
+            { "langSkill": "Tailwind.css", "langLevel": 90 },
+            { "langSkill": "Bootstrap", "langLevel": 60 },
+            { "langSkill": "Node.js", "langLevel": 75 },
+            { "langSkill": "PHP/Symfony", "langLevel": 70 },
+            { "langSkill": "Atlassian", "langLevel": 90 },
+            { "langSkill": "Git", "langLevel": 80 },
+            { "langSkill": "Figma", "langLevel": 75 },
+            { "langSkill": "AdobeXD", "langLevel": 50 },
+            { "langSkill": "Vercel", "langLevel": 75 },
+            { "langSkill": "AWS", "langLevel": 50 },
+            { "langSkill": "Ionos", "langLevel": 65 },
+            { "langSkill": "OVH", "langLevel": 70 },
+            { "langSkill": "Strapi", "langLevel": 75 },
+            { "langSkill": "Wordpress", "langLevel": 50 }
+        ]
+    },
+    "values": [
+          {
+            "name": "Rigueur",
+            "icon": "FaBalanceScale",
+            "description": "Méthode et précision à chaque étape."
+          },
+          {
+            "name": "Écoute",
+            "icon": "FaHeadset",
+            "description": "Comprendre vos besoins pour mieux répondre."
+          },
+          {
+            "name": "Adaptabilité",
+            "icon": "FaArrowsAlt",
+            "description": "Flexibilité pour m’ajuster à chaque projet."
+          },
+          {
+            "name": "Engagement Social",
+            "icon": "FaHandsHelping",
+            "description": "Promouvoir des solutions solidaires et accessibles."
+          },
+          {
+            "name": "Engagement Écologique",
+            "icon": "FaLeaf",
+            "description": "Minimiser l’empreinte numérique grâce à des performances optimisées."
+          }
+        ]
     }

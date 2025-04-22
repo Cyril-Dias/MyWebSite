@@ -32,7 +32,7 @@ export default async function Home({ params }) {
   const { lng } = await params
   const { t } = await useTranslation(lng, "homepage");
   return (
-    <main className="h-screen w-screen">
+    <main className="min-h-screen w-screen">
       <div className="flex flex-col items-center justify-start md:justify-around screen">
         {/* Title Animation */}
         <div className="w-full slideFromTop">
@@ -54,9 +54,15 @@ export default async function Home({ params }) {
           />
         </div>
       </div>
-      <div className="h-screen w-screen bg-competences">
+      <div className="h-auto w-screen bg-competences">
           <SecondLine
             lng={lng}
+            title={t("chart.title")}
+            skills={t("chart.skills", { returnObjects: true })}
+            services={t("chart.services")}
+            langTitle={t("langChart.title")}
+            langSkills={t("langChart.langSkills", { returnObjects: true })}
+            langStack={t("langChart.services")}
           />
         </div>
     </main>

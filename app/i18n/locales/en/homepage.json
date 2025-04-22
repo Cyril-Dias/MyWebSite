@@ -8,5 +8,43 @@
   "textLg": "Freelance Web Developer & & Digital Consultant",
   "name": "CYRIL DIAS WEB DEVELOPMENT",
   "portfolio": "Portfolio",
-  "cv": "Curriculum Vitae" 
+  "chart" : {
+    "title": "My skills",
+    "services": "Web Development · Digital Consulting · Project Management",
+    "skills": [
+      { "skill": "Web Performance", "level": 90 },
+      { "skill": "Accessibility", "level": 60 },
+      { "skill": "SEO", "level": 75 },
+      { "skill": "UX/UI", "level": 80 },
+      { "skill": "Testing / CI-CD", "level": 65 },
+      { "skill": "Team Coordination", "level": 90 },
+      { "skill": "Agile Project Management", "level": 75 },
+      { "skill": "Project Management Tools", "level": 75 }
+    ]
+  },
+  "langChart" : {
+    "title": "Technical Stack",
+    "services": "Frontend · Backend · UX/UI",
+    "langSkills": [
+      { "langSkill": "Astro", "langLevel": 40 },
+      { "langSkill": "React", "langLevel": 90 },
+      { "langSkill": "Next.js", "langLevel": 85 },
+      { "langSkill": "Vue.js/Nuxt.js", "langLevel": 60 },
+      { "langSkill": "Tailwind.css", "langLevel": 90 },
+      { "langSkill": "Bootstrap", "langLevel": 60 },
+      { "langSkill": "Node.js", "langLevel": 75 },
+      { "langSkill": "PHP/Symfony", "langLevel": 70 },
+      { "langSkill": "Atlassian", "langLevel": 90 },
+      { "langSkill": "Git", "langLevel": 80 },
+      { "langSkill": "Figma", "langLevel": 75 },
+      { "langSkill": "AdobeXD", "langLevel": 50 },
+      { "langSkill": "Vercel", "langLevel": 75 },
+      { "langSkill": "AWS", "langLevel": 50 },
+      { "langSkill": "Ionos", "langLevel": 65 },
+      { "langSkill": "OVH", "langLevel": 70 },
+      { "langSkill": "Strapi", "langLevel": 75 },
+      { "langSkill": "Wordpress", "langLevel": 50 }
+
+    ]
+  }
 }

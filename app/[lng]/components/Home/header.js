@@ -29,7 +29,7 @@ export default function FirstLine({ name, job, job2, job3, text, textLg, portfol
       morceaux.push(
         <span
           key={index}
-          className={`mot-coloré transition-colors duration-600 ${
+          className={`mot-coloré transition-colors duration-700 ${
             isHovered ? 'text-accent font-semibold text-[1.20rem]' : ''
           }`}
         >

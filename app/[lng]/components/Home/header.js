@@ -65,7 +65,7 @@ export default function FirstLine({ name, job, job2, job3, text, textLg, portfol
                 className="w-full text-[1.125rem] mb-4 font-semibold text-accent"
                 dangerouslySetInnerHTML={{ __html: text }}
               ></p>
-              <p className="h-full text-base md:text-md">{job}</p>
+              <p className="h-full text-base md:text-md"> {coloriserMotsJSX(job, motsColorés, hoverActive)}</p>
               <p className="h-full text-base md:text-md">{job2}</p>
               <p className="h-full text-base md:text-md">{job3}</p>
             </div>

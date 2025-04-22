@@ -1,8 +1,9 @@
-import Maintenance from '../components/Maintenance/maintenance'
+import Maintenance from "./../components/Maintenance/maintenance";
+import { useTranslation } from "../../i18n";
 
 export async function generateMetadata({ params }) {
   // read route params
-  const {lng} = await params 
+  const { lng } = await params
   const meta = {
     fr: {
       title: "Mes projets dev",
@@ -32,8 +33,15 @@ export async function generateMetadata({ params }) {
 
 
 export default async function Projets({ params }) {
-  const {lng} = await params 
+  const { lng } = await params;
+  const { t } = await useTranslation(lng, "map");
+
   return (
-    <Maintenance status={'Coding in progress'} text={'This page will display a map providing key stones of my journey'}/>
+    <Maintenance isActive={true} message={t("maintenance")} description={t("maintenanceDesc")}>
+      {/* Contenu réel de la page */}
+      <div className="screen">
+        {/* Inserer component map */}
+      </div>
+    </Maintenance>
   )
 }

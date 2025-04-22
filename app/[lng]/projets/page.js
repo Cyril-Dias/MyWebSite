@@ -1,13 +1,15 @@
 import Carousels from './carousels/page'
+import Maintenance from "./../components/Maintenance/maintenance";
+import { useTranslation } from "../../i18n";
 
 export async function generateMetadata({ params }) {
   // read route params
-  const {lng} = await params 
+  const { lng } = await params
   const meta = {
     fr: {
       title: "Mes projets dev",
       metadescription:
-        "Une bibliothèque intégrée de certaines de mes créations",
+        "Une bibliothèque de mes créations",
     },
     en: {
       title: "My dev projects",
@@ -32,10 +34,15 @@ export async function generateMetadata({ params }) {
 
 
 export default async function Projets({ params }) {
-  const {lng} = await params 
+  const { lng } = await params;
+  const { t } = await useTranslation(lng, "projets");
+
   return (
-  <div className='screen'>
-    <Carousels lng={lng} />
-  </div>
-  )
+    <Maintenance isActive={true} message={t("maintenance")} description={t("maintenanceDesc")}>
+      {/* Contenu réel de la page */}
+      <div className="screen">
+       <Carousels lng={lng} />
+      </div>
+    </Maintenance>
+  );
 }

@@ -10,8 +10,8 @@ export default function FirstLine({ name, job, job2, job3, text, textLg, portfol
   const handleMouseLeave = () => setHover(false);
 
   const motsColorésParLangue = {
-    fr: ['conçois', 'cadrage', 'développement full-stack', 'React', 'Next.js', 'Node.js', 'PHP', 'UX/UI', 'bases de données','API', 'sécurité', 'fluide', 'robustesse', 'scalabilité '],
-    en: ['design', 'develop', 'strategic planning', 'full-stack', 'React', 'Next.js', 'Node.js', 'PHP', 'database', 'API', 'security', 'smooth', 'robustness', 'scalability']
+    fr: ['conçois', 'cadrage', 'développement full-stack', 'React', 'Next.js', 'Node.js', 'PHP', 'UX/UI', 'bases de données','API', 'sécurité ', 'fluide', 'robustesse', 'scalabilité '],
+    en: ['design', 'develop', 'strategic planning', 'full-stack', 'React', 'Next.js', 'Node.js', 'PHP', 'database', 'API', 'security ', 'smooth', 'robustness', 'scalability']
   };
 
   const motsColorés = motsColorésParLangue[lng] || ['fr']; //fallback fr

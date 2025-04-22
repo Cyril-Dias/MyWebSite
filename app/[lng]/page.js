@@ -1,8 +1,7 @@
 import { useTranslation } from "../i18n";
 import OverLappedTitle from "./components/Titles/overlapped";
 import FirstLine from "./components/Home/header";
-
-// import Nature from './projets/carousels/nature'
+import SecondLine from "./components/Home/competences";
 
 export async function generateMetadata({ params }) {
   // read route params
@@ -33,8 +32,8 @@ export default async function Home({ params }) {
   const { lng } = await params
   const { t } = await useTranslation(lng, "homepage");
   return (
-    <main className="h-screen w-screen screen">
-      <div className="flex flex-col items-center justify-start md:justify-around">
+    <main className="h-screen w-screen">
+      <div className="flex flex-col items-center justify-start md:justify-around screen">
         {/* Title Animation */}
         <div className="w-full slideFromTop">
           <OverLappedTitle lng={lng} title={t("title")} />
@@ -55,6 +54,11 @@ export default async function Home({ params }) {
           />
         </div>
       </div>
+      <div className="h-screen w-screen bg-competences">
+          <SecondLine
+            lng={lng}
+          />
+        </div>
     </main>
   );
 }

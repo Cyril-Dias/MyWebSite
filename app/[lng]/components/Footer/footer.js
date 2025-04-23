@@ -4,8 +4,10 @@ import { SiNextdotjs } from "react-icons/si";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-light border-opacity-20 bg-gradient-to-t from-black to-transparent">
-      <div className="max-w-3xl mx-auto py-6 flex flex-col items-center space-y-4">
+    <footer
+      className="border-t border-light border-opacity-20 bg-gradient-to-t from-black to-transparent pb-28 lg:pb-0"
+    >
+      <div className="max-w-3xl mx-auto py-6 flex flex-col items-center space-y-4 lg:justify-center">
         {/* Icônes de réseaux */}
         <div className="flex justify-center space-x-6">
           <a

@@ -31,7 +31,9 @@ export default function Navbar({ lng }) {
   return (
     <>
       {/* Sm and Md screen Component */}
-      <div className="flex lg:hidden w-screen min-h-28 backdrop-blur-lg bg-indigo-950/20">
+      <div 
+      className="flex lg:hidden w-screen min-h-28 backdrop-blur-lg bg-indigo-950/20"
+      style={{ height: "var(--nav-height, 7rem)" }}>
         <ul className="grid grid-cols-4 w-full justify-items-center items-center border-t border-slate-50/[0.06] p-6">
           <li>
             <Link href={`/${lng}/`}>

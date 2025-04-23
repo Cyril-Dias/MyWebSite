@@ -20,7 +20,7 @@ export default async function RootLayout({ children, params }) {
           rel="stylesheet"
         />
       </head>
-      <body className="flex flex-col min-h-screen">
+      <body className="relative flex flex-col min-h-screen">
         <header>
           <div className='absolute bottom-0'>
             <Navbar lng={lng} />

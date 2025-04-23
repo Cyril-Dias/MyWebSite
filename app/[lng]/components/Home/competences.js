@@ -3,7 +3,7 @@
 import "../../globals.css";
 import SkillsChart from "./skillsChart";
 import LangChart from "./langChart";
-import Valeurs from "./valeurs"
+import ValuesSection from "./valeurs"
 
 export default function SecondLine({ lng, skills, title, services,  langTitle, langSkills, langStack }) {
   const accentColor = "linear-gradient(to right, #e78b22, #8b22e7)";
@@ -33,7 +33,7 @@ export default function SecondLine({ lng, skills, title, services,  langTitle, l
           {langStack}
       </h2>
       <LangChart lng={lng} langSkills={langSkills} langTitle={langTitle} />
-      <Valeurs lng={lng} />
+      <ValuesSection lng={lng} />
     </div>
     </>
   );

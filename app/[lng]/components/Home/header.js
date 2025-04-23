@@ -1,7 +1,7 @@
 "use client";
 
 import "../../globals.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function FirstLine({ name, job, job2, job3, text, textLg, portfolio, contact, lng }) {
 
@@ -10,43 +10,65 @@ export default function FirstLine({ name, job, job2, job3, text, textLg, portfol
   const handleMouseLeave = () => setHover(false);
 
   const motsColorésParLangue = {
-    fr: ['conçois', 'cadrage', 'développement full-stack', 'React', 'Next.js', 'Node.js', 'PHP', 'UX/UI', 'bases de données', 'API', 'sécurité ', 'fluide', 'robustesse', 'scalabilité '],
+    fr: ['conçois', 'cadrage', 'développement full-stack', 'React', 'Next.js', 'Node.js', 'PHP', 'UX/UI', 'bases de données', 'API', 'sécurité', 'fluide', 'robustesse', 'scalabilité'],
     en: ['design', 'develop', 'strategic planning', 'full-stack', 'React', 'Next.js', 'Node.js', 'PHP', 'database', 'API', 'security ', 'smooth', 'robustness', 'scalability']
   };
 
   const motsColorés = motsColorésParLangue[lng] || ['fr']; //fallback fr
 
   const coloriserMotsJSX = (texte, mots, isHovered) => {
-    const regex = new RegExp(`\\b(${mots.join('|')})\\b`, 'gi');
+    const regex = new RegExp(`(^|[^\\p{L}\\p{N}])(${mots.join('|')})(?=[^\\p{L}\\p{N}]|$)`, 'giu');
     const morceaux = [];
     let lastIndex = 0;
-
-    texte.replace(regex, (match, _groupe, index) => {
-      if (lastIndex !== index) {
-        morceaux.push(texte.slice(lastIndex, index));
+  
+    let match;
+    while ((match = regex.exec(texte)) !== null) {
+      const [fullMatch, prefix, mot] = match;
+      const matchIndex = match.index + prefix.length;
+  
+      // Ajout du texte avant le mot
+      if (lastIndex < matchIndex) {
+        morceaux.push(texte.slice(lastIndex, matchIndex));
       }
-
+  
+      // Ajout du mot coloré
       morceaux.push(
         <span
-          key={index}
-          className={`mot-coloré inline-block transition-all duration-300 font-semibold text-[1.1rem] ${isHovered ? 'text-accent scale-105' : 'text-white scale-100'
-            }`}
+          key={matchIndex}
+          className={`mot-coloré inline-block mdd: font-semibold transition-all duration-300
+            ${isHovered ? 'text-accent' : 'text-white'}
+            sm:text-accent 
+            md:text-[1.1rem]`}          
         >
-          {match}
+          {mot}
         </span>
-
       );
-
-      lastIndex = index + match.length;
-      return match;
-    });
-
+  
+      lastIndex = matchIndex + mot.length;
+    }
+  
     if (lastIndex < texte.length) {
       morceaux.push(texte.slice(lastIndex));
     }
-
+  
     return morceaux;
   };
+  
+
+  // Gestion de l'affichage des mots colorés pour petits écrans
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setHover(true);  // Force hoverActive pour sm
+      } else {
+        setHover(false); // Par défaut désactivé pour md+
+      }
+    };
+
+    handleResize(); // Call at mount
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <>
@@ -65,9 +87,16 @@ export default function FirstLine({ name, job, job2, job3, text, textLg, portfol
                 className="w-full text-[1.125rem] mb-4 font-semibold text-accent"
                 dangerouslySetInnerHTML={{ __html: text }}
               ></p>
-              <p className="w-full text-[1rem] md:text-xl tracking-tight leading-[1.75rem] fadeIn"> {coloriserMotsJSX(job, motsColorés, hoverActive)}</p>
-              <p className="w-full text-[1rem] md:text-xl tracking-tight leading-[1.75rem] fadeIn">{job2}</p>
-              <p className="w-full text-[1rem] md:text-xl tracking-tight leading-[1.75rem] fadeIn">{job3}</p>
+              <p className="w-full text-[1rem] md:text-xl tracking-tight leading-[1.75rem] fadeIn">
+                {coloriserMotsJSX(job, motsColorés, hoverActive)}
+              </p>
+              <p className="w-full text-[1rem] md:text-xl tracking-tight leading-[1.75rem] fadeIn">
+                {coloriserMotsJSX(job2, motsColorés, hoverActive)}
+              </p>
+              <p className="w-full text-[1rem] md:text-xl tracking-tight leading-[1.75rem] fadeIn">
+                {coloriserMotsJSX(job3, motsColorés, hoverActive)}
+              </p>
+
             </div>
             {/* Larger Screen text display */}
             <div className="w-full h-max hidden md:flex flex-col m-8 fadeIn">

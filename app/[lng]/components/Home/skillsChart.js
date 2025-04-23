@@ -55,8 +55,11 @@ export default function SkillsChart({ lng, skills, title }) {
           const fontSize = isHighLevel ? "text-xl" : "text-md";
 
           return (
-            <div key={item.skill} className="flex items-center w-full gap-x-4">
-              <div className="w-[30%] font-semibold text-lg text-light">
+            <div
+              key={item.skill}
+              className="flex flex-col sm:flex-row sm:items-center w-full gap-2 sm:gap-x-4"
+            >
+              <div className="w-full md:w-[30%] font-semibold md:text-lg text-light">
                 {item.skill}
               </div>
               <div

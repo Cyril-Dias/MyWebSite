@@ -45,15 +45,15 @@ export default function Footer() {
         </div>
 
         {/* Crédit et Made with Next.js */}
-        <div className="flex items-center space-x-2 text-sm text-light/80">
+        <div className="flex flex-col md:flex-row items-center md:space-x-2 text-sm text-light/80">
           <span>© 2025 Cyril Dias Web Development</span>
-          <span>•</span>
-          <span>Made with</span>
+          <span className="hidden md:flex">•</span>
+          <span className="hidden md:flex">Made with</span>
           <a
             href="https://nextjs.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center hover:opacity-80 transition"
+            className="hidden md:flex items-center hover:opacity-80 transition"
             aria-label="Next.js"
           >
             <SiNextdotjs className="text-2xl text-white mr-1" />

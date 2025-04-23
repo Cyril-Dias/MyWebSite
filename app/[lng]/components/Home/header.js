@@ -2,6 +2,7 @@
 
 import "../../globals.css";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function FirstLine({ name, job, job2, job3, text, textLg, portfolio, contact, lng }) {
 
@@ -122,24 +123,18 @@ export default function FirstLine({ name, job, job2, job3, text, textLg, portfol
           {/* Second row for the Links display */}
           <div className="absolute bottom-0 flex justify-evenly items-center mb-6 md:m-4 w-full slideFromBottom md:text-lg lg:text-xl">
             {hoverActive ? (
-              <a
+              <Link
                 className="btn-primary-active"
                 href="/projets"
-                target="_blank"
-                rel="noreferrer noopener"
-                download="Cyril Dias Curriculum Vitae"
               >
                 {portfolio}
-              </a>) : (
-              <a
+              </Link>) : (
+              <Link
                 className="btn-primary"
-                href="https://1drv.ms/b/s!AoYvc5okKxZ-hbtvckt37yq12wg38g?e=JzY1jk"
-                target="_blank"
-                rel="noreferrer noopener"
-                download="Cyril Dias Curriculum Vitae"
+                href="/projets"
               >
                 {portfolio}
-              </a>
+              </Link>
             )}
             {hoverActive ? (
               <a

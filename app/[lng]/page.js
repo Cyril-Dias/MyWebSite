@@ -1,4 +1,4 @@
-import { useTranslation } from "../i18n";
+import { getTranslations } from "../i18n";
 import OverLappedTitle from "./components/Titles/overlapped";
 import FirstLine from "./components/Home/header";
 import SecondLine from "./components/Home/competences";
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Home({ params }) {
   const { lng } = await params
-  const { t } = await useTranslation(lng, "homepage");
+  const { t } = await getTranslations(lng, "homepage");
   return (
     <main className="min-h-screen w-screen">
       <div className="flex flex-col items-center justify-start md:justify-around screen">

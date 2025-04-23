@@ -5,7 +5,7 @@
   "job2": "From strategic planning to development, I support companies in successfully delivering their digital projects.",
   "job3": " I use a variety of technologies, such as JavaScript, React, Next.js, Vue.js for the frontend, and languages like Node.js and PHP for the backend. I also handle database integration, API management, and application security. My goal is to ensure a smooth user experience while guaranteeing the robustness and scalability of the system.",
   "text": "Full Stack Web Developer </br> Specialized in Frontend",
-  "textLg": "Freelance Web Developer & & Digital Consultant",
+  "textLg": "Freelance Web Developer & Digital Consultant",
   "name": "CYRIL DIAS WEB DEVELOPMENT",
   "portfolio": "Portfolio",
   "chart" : {
@@ -42,8 +42,8 @@
       { "langSkill": "AWS", "langLevel": 50 },
       { "langSkill": "Ionos", "langLevel": 65 },
       { "langSkill": "OVH", "langLevel": 70 },
-      { "langSkill": "Strapi", "langLevel": 75 },
-      { "langSkill": "Wordpress", "langLevel": 50 }
+      { "langSkill": "Strapi", "langLevel": 80 },
+      { "langSkill": "Wordpress", "langLevel": 70 }
 
     ]
   }

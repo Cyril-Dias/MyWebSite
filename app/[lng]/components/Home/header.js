@@ -10,7 +10,7 @@ export default function FirstLine({ name, job, job2, job3, text, textLg, portfol
   const handleMouseLeave = () => setHover(false);
 
   const motsColorésParLangue = {
-    fr: ['conçois', 'cadrage', 'développement full-stack', 'React', 'Next.js', 'Node.js', 'PHP', 'UX/UI', 'bases de données','API', 'sécurité ', 'fluide', 'robustesse', 'scalabilité '],
+    fr: ['conçois', 'cadrage', 'développement full-stack', 'React', 'Next.js', 'Node.js', 'PHP', 'UX/UI', 'bases de données', 'API', 'sécurité ', 'fluide', 'robustesse', 'scalabilité '],
     en: ['design', 'develop', 'strategic planning', 'full-stack', 'React', 'Next.js', 'Node.js', 'PHP', 'database', 'API', 'security ', 'smooth', 'robustness', 'scalability']
   };
 
@@ -29,12 +29,12 @@ export default function FirstLine({ name, job, job2, job3, text, textLg, portfol
       morceaux.push(
         <span
           key={index}
-          className={`mot-coloré transition-colors duration-700 ${
-            isHovered ? 'text-accent font-semibold text-[1.20rem]' : ''
-          }`}
+          className={`mot-coloré inline-block transition-all duration-300 font-semibold text-[1.1rem] ${isHovered ? 'text-accent scale-105' : 'text-white scale-100'
+            }`}
         >
           {match}
         </span>
+
       );
 
       lastIndex = index + match.length;
@@ -65,9 +65,9 @@ export default function FirstLine({ name, job, job2, job3, text, textLg, portfol
                 className="w-full text-[1.125rem] mb-4 font-semibold text-accent"
                 dangerouslySetInnerHTML={{ __html: text }}
               ></p>
-              <p className="h-full text-base md:text-md"> {coloriserMotsJSX(job, motsColorés, hoverActive)}</p>
-              <p className="h-full text-base md:text-md">{job2}</p>
-              <p className="h-full text-base md:text-md">{job3}</p>
+              <p className="w-full text-[1rem] md:text-xl tracking-tight leading-[1.75rem] fadeIn"> {coloriserMotsJSX(job, motsColorés, hoverActive)}</p>
+              <p className="w-full text-[1rem] md:text-xl tracking-tight leading-[1.75rem] fadeIn">{job2}</p>
+              <p className="w-full text-[1rem] md:text-xl tracking-tight leading-[1.75rem] fadeIn">{job3}</p>
             </div>
             {/* Larger Screen text display */}
             <div className="w-full h-max hidden md:flex flex-col m-8 fadeIn">

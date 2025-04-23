@@ -1,5 +1,5 @@
 import Maintenance from "./../components/Maintenance/maintenance";
-import { useTranslation } from "../../i18n";
+import { getTranslations } from "../../i18n";
 
 export async function generateMetadata({ params }) {
   // read route params
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Projets({ params }) {
   const { lng } = await params;
-  const { t } = await useTranslation(lng, "map");
+  const { t } = await getTranslations(lng, "map");
 
   return (
     <Maintenance isActive={true} message={t("maintenance")} description={t("maintenanceDesc")}>

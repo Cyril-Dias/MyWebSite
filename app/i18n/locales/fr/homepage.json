@@ -42,8 +42,8 @@
             { "langSkill": "AWS", "langLevel": 50 },
             { "langSkill": "Ionos", "langLevel": 65 },
             { "langSkill": "OVH", "langLevel": 70 },
-            { "langSkill": "Strapi", "langLevel": 75 },
-            { "langSkill": "Wordpress", "langLevel": 50 }
+            { "langSkill": "Strapi", "langLevel": 80 },
+            { "langSkill": "Wordpress", "langLevel": 70 }
         ]
     },
     "values": [

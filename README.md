@@ -1,8 +1,10 @@
 This is my new web site project. The goal is to display some front-end feature while describing my profil. 
 This is a React/[Next.js](https://nextjs.org/) project. 
 
-## Getting Started
+## Maintenance Mode
+Trigger isActive props to switch Maintenance mode
 
+## Getting Started
 First, run the development server:
 
 ```bash

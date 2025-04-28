@@ -20,11 +20,11 @@ async function getData(topic, nbr, apiKey) {
 }
 
 export default async function Nature() {
-  const dataImg = await getData('Nature', '5',  process.env.PEXELS_API_KEY);
+  const dataImg = await getData('Nature', '3',  process.env.PEXELS_API_KEY);
   return (
     <>
       {dataImg['photos'].map((photo) => (
-        <div key={photo}>
+        <div key={photo.id}>
           <Elipsed 
             img={photo.src.original} 
             photographer={photo.photographer} 
